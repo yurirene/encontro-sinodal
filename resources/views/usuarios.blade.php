@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+@extends('adminlte::template')
 
 @section('title', 'Usuários')
 
@@ -28,18 +28,5 @@
 @endsection
 
 @push('js')
-
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.2/b-2.0.0/b-html5-2.0.0/b-print-2.0.0/datatables.min.js"></script>
-<script src="/vendor/datatables/buttons.server-side.js"></script>
-
-
-
-
 {!! $dataTable->scripts() !!}
 @endpush
