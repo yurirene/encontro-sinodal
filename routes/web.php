@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\InscricaoController;
+use App\Mail\COLEmail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +19,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('site.index');
-});
+})->name('site.index');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/users', [App\Http\Controllers\HomeController::class, 'usuarios'])->name('usuarios');
+Route::post('/inscricao', [InscricaoController::class, 'store'])->name('inscricao.store');
+Route::get('email', function() {
+    return ;
+});
+
+Route::group(['middlware' => 'auth', 'prefix' => 'admin'], function() {
+    Route::resource('/inscritos', InscricaoController::class)->names('inscritos')->except(['show', 'destroy']);
+    Route::get('inscritos/{inscrito}/delete', [InscricaoController::class, 'delete'])->name('inscritos.delete');
+    Route::get('inscritos/{inscrito}/pagamentos', [InscricaoController::class, 'pagamentos'])->name('inscritos.pagamentos');
+    Route::get('inscritos/{inscrito}/onibus', [InscricaoController::class, 'onibus'])->name('inscritos.onibus');
+});

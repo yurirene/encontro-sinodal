@@ -329,6 +329,7 @@
 				<div class="row">
 					<div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 						<form action="{{route('inscricao.store')}}" method="post" role="form" class="php-email-form">
+							@csrf
 							<div class="row">
 								<div class="form-group col-md-6">
 									<label for="nome">Nome</label>
@@ -342,7 +343,7 @@
 							<div class="row">
 								<div class="form-group col-md-6">
 									<label for="celular">Celular</label>
-									<input type="text" class="form-control" name="celular" id="celular" required>
+									<input type="text" class="form-control celular" name="celular" id="celular" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="federacao">Federação</label>
@@ -369,10 +370,31 @@
 									</select>
 								</div>
 							</div>
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label for="tipo_pagamento">Forma de Pagamento</label>
+									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
+										<option value="PIX">PIX</option>
+										<option value="BOLETO">BOLETO</option>
+										<option value="BOLETO_PARCELADO">PARCELADO (BOLETO)</option>
+									</select>
+								</div>
+								
+								<div class="form-group col-md-6" id="parcelas" style="display: none;">
+									<label for="quantidade_parcelas">Quantidade Parcelas</label>
+									<select class="form-control" name="quantidade_parcelas" id="quantidade_parcelas">
+										<option value="2">2 parcelas</option>
+										<option value="3">3 parcelas</option>
+										<option value="4">4 parcelas</option>
+										<option value="5">5 parcelas</option>
+									</select>
+									<small>Acréscimo de 3 reais por parcela</small>
+								</div>
+							</div>
 							<div class="my-3">
 								<div class="loading">Loading</div>
 								<div class="error-message"></div>
-								<div class="sent-message">Your message has been sent. Thank you!</div>
+								<div class="sent-message">Inscrição Efetuada. Um mensagem foi enviado para o seu e-mail</div>
 							</div>
 							<div class="text-center"><button type="submit">Finalizar</button></div>
 						</form>
@@ -412,11 +434,52 @@
 	<script src="/site/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 	<script src="/site/assets/vendor/swiper/swiper-bundle.min.js"></script>
 	<script src="/site/assets/vendor/waypoints/noframework.waypoints.js"></script>
-	<script src="/site/assets/vendor/php-email-form/validate.js"></script>
-
+	<script
+	src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
 	<!-- Template Main JS File -->
 	<script src="/site/assets/js/main.js"></script>
+	<script src="/jquery.mask.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.all.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('.celular').mask('(00)00000-0000');
+		});
+		$('#tipo_pagamento').on('change', function() {
+			if (this.value == 'BOLETO_PARCELADO') {
+				$('#parcelas').show();
+			} else {
+				$('#parcelas').hide();
+			}
+		});
+	</script>
 
+	@if(session()->has('mensagem') && session('mensagem') == true)
+		<script>
+			Swal.fire('Inscrição Realizada com Sucesso')
+		</script>
+	@endif
+
+
+	@if(session()->has('mensagem') && session('mensagem') == false)
+		<script>
+			Swal.fire('Erro ao Realizar Inscrição')
+		</script>
+	@endif
+	
+	@if($errors->any())
+		@foreach($errors->all() as $error)
+		<script>
+			Swal.fire({
+				icon: 'error',
+				title: 'Erro',
+				text: '{{$error}}'
+			});
+		</script>
+		@endforeach
+	@endif
 </body>
 
 </html>
