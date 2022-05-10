@@ -35,6 +35,31 @@ class Inscricao extends Model
         return $nome[0];
     }
 
+    public function getStatusInscricaoAttribute()
+    {
+        return self::LABELS[$this->status]['text'];
+    }
+
+    public function getTotalPagoAttribute()
+    {
+        $pagamentos = $this->pagamentos()->where('status', 1)->get();
+        $total = 0;
+        foreach ($pagamentos as $pagamento) {
+            $total += floatval($pagamento->valor);
+        }
+        return $total;
+    }
+
+    public function getTotalPagoOnibusAttribute()
+    {
+        $pagamentos = $this->pagamentoOnibus()->where('status', 1)->get();
+        $total = 0;
+        foreach ($pagamentos as $pagamento) {
+            $total += floatval($pagamento->valor);
+        }
+        return $total;
+    }
+
     public function getCriadoEmAttribute()
     {
         return Carbon::createFromDate($this->created_at)->format('d/m/y H:i:s');
@@ -43,5 +68,15 @@ class Inscricao extends Model
     public function timeline()
     {
         return $this->hasMany(Timeline::class);
+    }
+
+    public function pagamentos()
+    {
+        return $this->hasMany(Pagamento::class);
+    }
+
+    public function pagamentoOnibus()
+    {
+        return $this->hasMany(PagamentoOnibus::class);
     }
 }

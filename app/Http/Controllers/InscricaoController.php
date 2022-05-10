@@ -104,6 +104,26 @@ class InscricaoController extends Controller
         }
     }
 
+    public function status(Inscricao $inscrito)
+    {
+        try {
+            $inscrito->update([
+                'status' => 2
+            ]);
+            EnviarEmailService::confirmarInscricao($inscrito);
+            return redirect()->back()->with([
+                'mensagem' => 'Operação Realizada com Sucesso',
+                'status' => true
+            ]);
+        } catch (\Throwable $th) {
+            
+            return redirect()->back()->with([
+                'mensagem' => 'Erro ao realizar operação',
+                'status' => false
+            ])->withInput();
+        }
+    }
+
     public function acompanhamento($codigo)
     {
         $inscricao = Inscricao::with('timeline')->where('codigo', $codigo)->first();

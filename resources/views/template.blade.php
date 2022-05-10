@@ -88,7 +88,7 @@ function deleteRegistro(url) {
             theme: "classic"
         });
 
-        $('.isMoney').mask('000,000,000', {reverse: true});
+        $('.isMoney').mask('000.000,00', {reverse: true});
 
         $('.isMoneyNegative').mask('Z000,000,000', {
             translation: {

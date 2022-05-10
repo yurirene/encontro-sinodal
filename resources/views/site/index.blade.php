@@ -238,7 +238,7 @@
 						</p>
 						<p>
 							Quantidade de vagas: 50 <br>
-							Quantidade restantes: - <br>
+							Interessados: - <br>
 							Valor: R$170,00.
 						</p>
 					</div>

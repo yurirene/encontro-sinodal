@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\InscricaoController;
+use App\Http\Controllers\PagamentoController;
+use App\Http\Controllers\PagamentoOnibusController;
 use App\Mail\COLEmail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -26,9 +28,20 @@ Auth::routes();
 Route::post('/inscricao', [InscricaoController::class, 'store'])->name('inscricao.store');
 Route::get('/acompanhamento/{inscricao}', [InscricaoController::class, 'acompanhamento'])->name('inscricao.acompanhamento');
 
-Route::group(['middlware' => 'auth', 'prefix' => 'admin'], function() {
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     Route::resource('/inscritos', InscricaoController::class)->names('inscritos')->except(['show', 'destroy']);
     Route::get('inscritos/{inscrito}/delete', [InscricaoController::class, 'delete'])->name('inscritos.delete');
-    Route::get('inscritos/{inscrito}/pagamentos', [InscricaoController::class, 'pagamentos'])->name('inscritos.pagamentos');
     Route::get('inscritos/{inscrito}/onibus', [InscricaoController::class, 'onibus'])->name('inscritos.onibus');
+    Route::get('inscritos/{inscrito}/status', [InscricaoController::class, 'status'])->name('inscritos.status');
+
+    Route::get('inscritos/{inscrito}/pagamentos', [PagamentoController::class, 'index'])->name('inscritos.pagamentos.index');
+    Route::get('inscritos/{inscrito}/pagamentos/create', [PagamentoController::class, 'create'])->name('inscritos.pagamentos.create');
+    Route::get('inscritos/{inscrito}/pagamentos/{pagamento}/status', [PagamentoController::class, 'status'])->name('inscritos.pagamentos.status');
+    Route::get('inscritos/{inscrito}/pagamentos/{pagamento}/delete', [PagamentoController::class, 'delete'])->name('inscritos.pagamentos.delete');
+    Route::post('inscritos/{inscrito}/pagamentos/store', [PagamentoController::class, 'store'])->name('inscritos.pagamentos.store');
+
+    Route::get('inscritos/{inscrito}/onibus', [PagamentoOnibusController::class, 'index'])->name('inscritos.onibus.index');
+    Route::get('inscritos/{inscrito}/onibus/create', [PagamentoOnibusController::class, 'create'])->name('inscritos.onibus.create');
+    Route::get('inscritos/{inscrito}/onibus/{pagamento}/delete', [PagamentoOnibusController::class, 'delete'])->name('inscritos.onibus.delete');
+    Route::post('inscritos/{inscrito}/onibus/store', [PagamentoOnibusController::class, 'store'])->name('inscritos.onibus.store');
 });

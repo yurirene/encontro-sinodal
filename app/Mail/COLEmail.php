@@ -14,11 +14,13 @@ class COLEmail extends Mailable
 
     public $inscricao;
     public $mensagem;
+    public $assunto;
 
-    public function __construct(Inscricao $inscricao, string $mensagem)
+    public function __construct(Inscricao $inscricao, string $mensagem, string $assunto)
     {
         $this->inscricao = $inscricao;
         $this->mensagem = $mensagem;
+        $this->assunto = $assunto;
     }
 
     /**
@@ -30,6 +32,7 @@ class COLEmail extends Mailable
     {
         return $this->from(env('MAIL_FROM_ADDRESS'))
             ->view('email.template')
+            ->subject($this->assunto)
             ->with([
                 'inscricao' => $this->inscricao,
                 'mensagem' => $this->mensagem
