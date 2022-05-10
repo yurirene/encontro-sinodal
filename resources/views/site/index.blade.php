@@ -6,27 +6,27 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 	<title>Encontro Sinodal</title>
-	<meta content="" name="description">
-	<meta content="" name="keywords">
+	<meta content="I Encontro de Mocidades Presbiterianas do Sinodo Setentrional" name="description">
+	<meta content="Encontro Sinodal, Setentrional, Mocidades, UMP, Mocidade Presbiteriana, Jovens Presbiterianos, UMP Amazonas, UMP Roraima" name="keywords">
 
 	<!-- Favicons -->
-	<link href="/site/assets/img/favicon.png" rel="icon">
-	<link href="/site/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/img/favicon.png" rel="icon">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
-	<link href="/site/assets/vendor/aos/aos.css" rel="stylesheet">
-	<link href="/site/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/site/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="/site/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="/site/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="/site/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-	<link href="/site/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 	<!-- Template Main CSS File -->
-	<link href="/site/assets/css/style.css" rel="stylesheet">
+	<link href="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/css/style.css" rel="stylesheet">
 
 	<!-- =======================================================
 	* Template Name: Arsha - v4.7.1
@@ -44,7 +44,7 @@
 
 			<h1 class="logo me-auto"><a href="index.html">Encontro Sinodal</a></h1>
 			<!-- Uncomment below if you prefer to use an image logo -->
-			<!-- <a href="index.html" class="logo me-auto"><img src="/site/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+			<!-- <a href="index.html" class="logo me-auto"><img src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
 			<nav id="navbar" class="navbar">
 				<ul>
@@ -67,7 +67,7 @@
 					<h2>Rev. Heber Campos Jr</h2>
 				</div>
 				<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-					<img src="/site/assets/img/encontro.png" class="img-fluid animated" alt="">
+					<img src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/img/encontro.png" class="img-fluid animated" alt="">
 				</div>
 			</div>
 		</div>
@@ -138,7 +138,7 @@
 							culpa qui officia deserunt mollit anim id est laborum.
 						</p>
 						<div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-							<div class="pic"><img src="/site/assets/img/heber.png" class="img-fluid" alt=""></div>
+							<div class="pic"><img src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/img/heber.png" class="img-fluid" alt=""></div>
 							<div class="member-info">
 								<h4>Rev. Heber Carlos de Campos Jr </h4>
 								<span>Palestrante</span>
@@ -221,7 +221,7 @@
 
 				<div class="row">
 					<div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-						<img src="/site/assets/img/viagem.svg" class="img-fluid" alt="">
+						<img src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/img/viagem.svg" class="img-fluid" alt="">
 					</div>
 					<div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
 						<h3>Ônibus Manaus - Boa Vista</h3>
@@ -428,18 +428,18 @@
 	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 	<!-- Vendor JS Files -->
-	<script src="/site/assets/vendor/aos/aos.js"></script>
-	<script src="/site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="/site/assets/vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="/site/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="/site/assets/vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="/site/assets/vendor/waypoints/noframework.waypoints.js"></script>
+	<script src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/aos/aos.js"></script>
+	<script src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/vendor/waypoints/noframework.waypoints.js"></script>
 	<script
 	src="https://code.jquery.com/jquery-3.6.0.min.js"
 	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 	crossorigin="anonymous"></script>
 	<!-- Template Main JS File -->
-	<script src="/site/assets/js/main.js"></script>
+	<script src="{{ config('app.debug') == true ? '' : '/public'}}/site/assets/js/main.js"></script>
 	<script src="/jquery.mask.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.all.min.js"></script>
 	
