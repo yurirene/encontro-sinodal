@@ -6,11 +6,11 @@
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 	<title>Encontro Sinodal</title>
-	<meta content="" name="description">
-	<meta content="" name="keywords">
+	<meta content="I Encontro de Mocidades Presbiterianas do Sínodo Setentrional" name="description">
+	<meta content="Encontro de Mocidade, Setentrional, UMP, UMP Amazonas, UMP Roraima, Jovens Presbiterianos, Presbiteriana, Amazonas" name="keywords">
 
 	<!-- Favicons -->
-	<link href="/site/assets/img/favicon.png" rel="icon">
+	<link href="/favicon.png" rel="icon">
 	<link href="/site/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
@@ -82,9 +82,6 @@
 
 				<div class="row" data-aos="zoom-in">
 
-					<div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-						<h3></h3>
-					</div>
 					
 					<div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 						<h3>FMS</h3>
@@ -103,10 +100,6 @@
 					</div>
 
 
-					<div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-						<h3></h3>
-					</div>
-
 				</div>
 
 			</div>
@@ -123,19 +116,21 @@
 				<div class="row content">
 					<div class="col-lg-6">
 						<p>
-							TEXTO
+							Como viveremos diante dos novos desafios que nos são postos à frente? Cidadãos dos céus que já, mas ainda não, 
+							que peregrinam, sem desanimar, fazendo a vontade de seu Senhor?
 						</p>
-						<ul>
-							<li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-							<li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-							<li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-						</ul>
+						<p>
+							A geração que experimenta as pressões de um abalo mundial que emergiu um modo de viver que repercute em todas as 
+							etapas da vida é convocada à reação bíblica de respirar a completude de sua existência, no Senhor, olhando firmemente para o
+							 Alvo, o Autor e Consumador da Fé, o Senhor Jesus Cristo.
+						</p>
+						
 					</div>
 					<div class="col-lg-6 pt-4 pt-lg-0">
 						<p>
-							Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-							culpa qui officia deserunt mollit anim id est laborum.
+							Com esse mover, a Sinodal Setentrional convoca toda a mocidade presbiteriana a se aglomerar, outra vez, 
+							nos dias 21 a 24 de outubro de 2022, no Acampamento Maná, em Boa Vista – RR, para juntos e unidos celebrarmos a 
+							satisfação de estarmos juntos após um longo período distantes! Será inesquecível! 
 						</p>
 						<div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
 							<div class="pic"><img src="/site/assets/img/heber.png" class="img-fluid" alt=""></div>
@@ -227,9 +222,9 @@
 						<h3>Ônibus Manaus - Boa Vista</h3>
 						<div class="skills-content">
 							<div class="progress">
-								<span class="skill">Vagas Preenchidas <i class="val">100%</i></span>
+								<span class="skill">Vagas Preenchidas <i class="val">0%</i></span>
 								<div class="progress-bar-wrap">
-									<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</div>
 						</div>
@@ -243,7 +238,7 @@
 						</p>
 						<p>
 							Quantidade de vagas: 50 <br>
-							Quantidade restantes: X <br>
+							Quantidade restantes: - <br>
 							Valor: R$170,00.
 						</p>
 					</div>
