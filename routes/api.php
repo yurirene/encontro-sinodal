@@ -30,5 +30,5 @@ Route::any('/chatbot', function() {
     $string = print_r($update, true);
     
     Log::info($string);
-    EnviarMsgService::sendMessage($string);
+    // EnviarMsgService::sendMessage($string);
 });
