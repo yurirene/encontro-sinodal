@@ -160,7 +160,7 @@
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-calendar2-event-fill"></i></div>
 							<h4 class="text-center"><a href="">Data</a></h4>
-							<h4>21 a 24 de Outubro</h4>
+							<h4 class="text-center">21 a 24 de Outubro</h4>
 						</div>
 					</div>
 
@@ -168,7 +168,7 @@
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-geo-alt-fill"></i></div>
 							<h4 class="text-center"><a href="">Local</a></h4>
-							<h4>Boa Vista - RR <br> Acampamento Maná</h4>
+							<h4 class="text-center">Boa Vista - RR <br> Acampamento Maná</h4>
 						</div>
 					</div>
 
@@ -176,7 +176,7 @@
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor AM</a></h4>
-							<p>
+							<p class="text-center">
 								<b>09/05/22 - 31/07/22</b>
 								<br>
 								R$130,00 (Ônibus não incluso)
@@ -193,7 +193,7 @@
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor RR</a></h4>
-							<p>
+							<p class="text-center">
 								<b>09/05/22 - 31/07/22</b>
 								<br>
 								R$140,00
