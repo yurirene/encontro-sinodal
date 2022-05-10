@@ -39,4 +39,9 @@ class Inscricao extends Model
     {
         return Carbon::createFromDate($this->created_at)->format('d/m/y H:i:s');
     }
+
+    public function timeline()
+    {
+        return $this->hasMany(Timeline::class);
+    }
 }

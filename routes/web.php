@@ -24,9 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::post('/inscricao', [InscricaoController::class, 'store'])->name('inscricao.store');
-Route::get('email', function() {
-    return ;
-});
+Route::get('/acompanhamento/{inscricao}', [InscricaoController::class, 'acompanhamento'])->name('inscricao.acompanhamento');
 
 Route::group(['middlware' => 'auth', 'prefix' => 'admin'], function() {
     Route::resource('/inscritos', InscricaoController::class)->names('inscritos')->except(['show', 'destroy']);

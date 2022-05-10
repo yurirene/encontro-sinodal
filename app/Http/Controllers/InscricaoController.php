@@ -97,4 +97,12 @@ class InscricaoController extends Controller
             ])->withInput();
         }
     }
+
+    public function acompanhamento($codigo)
+    {
+        $inscricao = Inscricao::with('timeline')->where('codigo', $codigo)->first();
+        return view('site.acompanhamento', [
+            'inscricao' => $inscricao
+        ]);
+    }
 }
