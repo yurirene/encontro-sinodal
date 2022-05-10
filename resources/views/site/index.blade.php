@@ -177,12 +177,12 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor AM</a></h4>
 							<p>
-								<b>09/05/22 - 14/08/22</b>
+								<b>09/05/22 - 31/07/22</b>
 								<br>
 								R$130,00 (Ônibus não incluso)
 								<br>
 								<br>
-								<b>09/05/22 - 14/08/22</b>
+								<b>01/08/22 - 30/09/22</b>
 								<br>
 								R$130,00 (Ônibus não incluso)
 							</p>
@@ -194,12 +194,12 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor RR</a></h4>
 							<p>
-								<b>09/05/22 - 14/08/22</b>
+								<b>09/05/22 - 31/07/22</b>
 								<br>
 								R$140,00
 								<br>
 								<br>
-								<b>09/05/22 - 14/08/22</b>
+								<b>01/08/22 - 30/09/22</b>
 								<br>
 								R$160,00 
 							</p>
