@@ -27,7 +27,7 @@ class ChatBotController extends Controller
 
         $parameters = [
             'chat_id' => $chat_id, 
-            "text" => self::$$function()
+            "text" => self::$function()
         ];
 
         self::sendMessage($parameters);
