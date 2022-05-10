@@ -3,6 +3,7 @@
 use App\Http\Controllers\ChatBotController;
 use App\Services\EnviarMsgService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,8 +23,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/chatbot', function() {
     $update_response = file_get_contents("php://input");
+    Log::info('Entrou aqui');
+    
 
     $update = json_decode($update_response, true);
     $string = print_r($update, true);
+    
+    Log::info($string);
     EnviarMsgService::sendMessage($string);
 });
