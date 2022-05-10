@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\DataTables\InscritosDataTable;
 use App\Models\Inscricao;
 use App\Services\EnviarEmailService;
+use App\Services\EnviarMsgService;
 use App\Services\TimelineService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -72,8 +73,13 @@ class InscricaoController extends Controller
             ]);
             EnviarEmailService::inscricaoRecebida($inscricao);
             TimelineService::inscrito($inscricao);
+            EnviarMsgService::novaInscricao($inscricao);
             DB::commit();
-            return redirect()->route('site.index')->with('mensagem', true);
+            return redirect()->route('site.index')->with([
+                'mensagem' => true,
+                'nome_inscrito' => $inscricao->nome,
+                'pagamento_inscrito' => $inscricao->tipo_pagamento . ($inscricao->tipo_pagamento == 'BOLETO_PARCELADO' ? ' - ' . $inscricao->quantidade_parcelas : '')
+            ]);
         } catch (\Throwable $th) {
             DB::rollBack();
             Log::error($th->getMessage());

@@ -14,6 +14,11 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <div class="container">
+	@if(is_null($inscricao))
+	<div class="page-header">
+		<h1 id="timeline">Inscrição Cancelada</h1>
+	</div>
+	@endif
 	<div class="page-header">
 		<h1 id="timeline">Olá, {{$inscricao->nome}}</h1>
 	</div>

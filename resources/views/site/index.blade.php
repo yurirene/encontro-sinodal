@@ -454,6 +454,12 @@
 	@if(session()->has('mensagem') && session('mensagem') == true)
 		<script>
 			Swal.fire('Inscrição Realizada com Sucesso')
+			.then((result) => {
+				if (result.isConfirmed) {
+					window.open("https://api.whatsapp.com/send?l=pt-BR&phone=5592988475481&text=Nome%20{{session('nome_inscrito')}}%2C%20Pagamento%20{{session('pagamento_inscrito')}}", '_blank' );
+				}
+			})
+
 		</script>
 	@endif
 
