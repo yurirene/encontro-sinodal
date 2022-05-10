@@ -29,7 +29,7 @@ class EnviarMsgService
         $mensagem .= 'Federação: ' . $inscricao->federacao . PHP_EOL; 
         $mensagem .= 'Igreja: ' . $inscricao->igreja . PHP_EOL; 
         $mensagem .= 'Pagamento: ' . $inscricao->tipo_pagamento . PHP_EOL;
-        if ($inscricao->tipo_pagamento == 'BOLETO_PARCELADO') {
+        if ($inscricao->tipo_pagamento != 'PIX') {
             $mensagem .= 'Parcelas: ' . $inscricao->quantidade_parcelas . PHP_EOL; 
         }
         $mensagem .= 'Ônibus: ' . ($inscricao->onibus==1 ? 'Sim' : 'Não') . PHP_EOL;

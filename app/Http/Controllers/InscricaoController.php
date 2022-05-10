@@ -37,7 +37,7 @@ class InscricaoController extends Controller
                 'igreja' => $request->igreja,
                 'onibus' => $request->onibus == 'SIM',
                 'tipo_pagamento' => $request->tipo_pagamento,
-                'quantidade_parcelas' => $request->tipo_pagamento == 'BOLETO_PARCELADO' ? $request->quantidade_parcelas : null,
+                'quantidade_parcelas' => $request->tipo_pagamento != 'PIX' ? $request->quantidade_parcelas : null,
                 'codigo' => md5($request->email)
             ]);
             return redirect()->route('inscritos.index')->with([
@@ -68,7 +68,7 @@ class InscricaoController extends Controller
                 'igreja' => $request->igreja,
                 'onibus' => $request->onibus == 'SIM',
                 'tipo_pagamento' => $request->tipo_pagamento,
-                'quantidade_parcelas' => $request->tipo_pagamento == 'BOLETO_PARCELADO' ? $request->quantidade_parcelas : null,
+                'quantidade_parcelas' => $request->tipo_pagamento != 'PIX' ? $request->quantidade_parcelas : null,
                 'codigo' => md5($request->email)
             ]);
             EnviarEmailService::inscricaoRecebida($inscricao);
@@ -78,7 +78,7 @@ class InscricaoController extends Controller
             return redirect()->route('site.index')->with([
                 'mensagem' => true,
                 'nome_inscrito' => $inscricao->nome,
-                'pagamento_inscrito' => $inscricao->tipo_pagamento . ($inscricao->tipo_pagamento == 'BOLETO_PARCELADO' ? ' - ' . $inscricao->quantidade_parcelas : '')
+                'pagamento_inscrito' => $inscricao->tipo_pagamento . ($inscricao->tipo_pagamento != 'PIX' ? ' - ' . $inscricao->quantidade_parcelas : '')
             ]);
         } catch (\Throwable $th) {
             DB::rollBack();

@@ -23,12 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::any('/chatbot', function() {
     $update_response = file_get_contents("php://input");
-    Log::info('Entrou aqui');
-    
+    $request = json_decode($update_response, true);
 
-    $update = json_decode($update_response, true);
-    $string = print_r($update, true);
-    
-    Log::info($string);
-    // EnviarMsgService::sendMessage($string);
+    ChatBotController::process($request);
 });

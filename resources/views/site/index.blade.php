@@ -370,7 +370,7 @@
 									<label for="tipo_pagamento">Forma de Pagamento</label>
 									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
 										<option value="PIX">PIX</option>
-										<option value="BOLETO">BOLETO</option>
+										<option value="PIX_PARCELADO">PARCELADO (PIX)</option>
 										<option value="BOLETO_PARCELADO">PARCELADO (BOLETO)</option>
 									</select>
 								</div>
@@ -383,7 +383,7 @@
 										<option value="4">4 parcelas</option>
 										<option value="5">5 parcelas</option>
 									</select>
-									<small>Acréscimo de 3 reais por parcela</small>
+									<small id="parcelas_info">Acréscimo de 3 reais por parcela</small>
 								</div>
 							</div>
 							<div class="my-3">
@@ -443,10 +443,15 @@
 			$('.celular').mask('(00)00000-0000');
 		});
 		$('#tipo_pagamento').on('change', function() {
-			if (this.value == 'BOLETO_PARCELADO') {
+			if (this.value != 'PIX') {
 				$('#parcelas').show();
 			} else {
 				$('#parcelas').hide();
+			}
+			if (this.value == 'BOLETO_PARCELADO') {
+				$('#parcelas_info').show();
+			} else {
+				$('#parcelas_info').hide();
 			}
 		});
 	</script>
