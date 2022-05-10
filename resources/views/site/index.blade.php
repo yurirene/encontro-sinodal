@@ -168,7 +168,7 @@
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-geo-alt-fill"></i></div>
 							<h4 class="text-center"><a href="">Local</a></h4>
-							<h4 class="text-center">Boa Vista - RR <br> Acampamento Maná</h4>
+							<h4 class="text-center">Boa Vista - RR <br> </h4>
 						</div>
 					</div>
 
