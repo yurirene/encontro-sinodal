@@ -323,6 +323,7 @@
 
 				<div class="row">
 					<div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+						
 						<form action="{{route('inscricao.store')}}" method="post" role="form" class="php-email-form">
 							@csrf
 							<div class="row">
@@ -392,6 +393,8 @@
 								<div class="sent-message">Inscrição Efetuada. Um mensagem foi enviado para o seu e-mail</div>
 							</div>
 							<div class="text-center"><button type="submit">Finalizar</button></div>
+							<p><b><i>Após finalizar será enviado um e-mail para você acompanhar o status da sua inscrição. Caso não encontre, verifique na caixa de spam</i></b></p>
+
 						</form>
 					</div>
 
