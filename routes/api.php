@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/chatbot', function() {
+Route::any('/chatbot', function() {
     $update_response = file_get_contents("php://input");
     Log::info('Entrou aqui');
     
