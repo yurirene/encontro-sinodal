@@ -267,6 +267,7 @@
 							Quantidade de vagas: 50 <br>
 							Interessados: {{$onibus}} <br>
 							Valor: R$170,00.
+							<b>Crianças:</b> Até 05 anos podem ir no colo, demais casos será cobrado o valor do assento.
 						</p>
 						<h5><b>Atenção:</b> A inscrição não inclui o ônibus. <b class="text-danger">O pagamento do ônibus será feito de forma separada.</b></h5>
 					</div>
