@@ -214,9 +214,10 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Crianças</a></h4>
 							<p class="">
-								<b>2 a 5 anos</b> - R$ 50,00 <br> 
-								<b>6 a 10 anos</b> - R$ 80,00 <br> 
-								<b>10 a 12 anos</b> - R$ 100,00 <br> 
+								<b>2 a 5 anos</b> - R$ 50,00* <br> 
+								<b>6 a 10 anos</b> - R$ 80,00* <br> 
+								<b>10 a 12 anos</b> - R$ 100,00* <br> 
+								*Valor da inscrição (não incluso o Ônibus)
 							</p>
 						</div>
 					</div>
