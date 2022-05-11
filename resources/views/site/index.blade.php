@@ -381,6 +381,7 @@
 										<option value="FMRR">FMRR</option>
 										<option value="FPSAM">FPSAM</option>
 										<option value="FPMAN">FPMAN</option>
+										<option value="Outro">Outro</option>
 									</select>
 								</div>
 							</div>

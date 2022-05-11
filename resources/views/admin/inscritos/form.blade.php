@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group{{ $errors->has('federacao') ? ' has-error' : '' }}">
                     {!! Form::label('federacao', 'Federação') !!}
-                    {!! Form::select('federacao',['FAMP' => 'FAMP', 'FEPAM' => 'FEPAM', 'FMS' => 'FMS', 'FMRR' => 'FMRR', 'FPSAM' => 'FPSAM', 'FPMAN' => 'FPMAN'], null, ['id' => 'federacao', 'class' => 'form-control', 'required' => 'required']) !!}
+                    {!! Form::select('federacao',['FAMP' => 'FAMP', 'FEPAM' => 'FEPAM', 'FMS' => 'FMS', 'FMRR' => 'FMRR', 'FPSAM' => 'FPSAM', 'FPMAN' => 'FPMAN', 'Outro' => 'Outro'], null, ['id' => 'federacao', 'class' => 'form-control', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('federacao') }}</small>
                     </div>
                     <div class="form-group{{ $errors->has('igreja') ? ' has-error' : '' }}">
