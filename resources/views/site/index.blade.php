@@ -267,7 +267,7 @@
 							Quantidade de vagas: 50 <br>
 							Interessados: {{$onibus}} <br>
 							Valor: R$170,00. <br>
-							<b>Crianças até 05 anos podem ir no colo</b>, demais casos será cobrado o valor do assento.
+							<b>Crianças até 05 anos podem ir no colo</b>, a partir de 06 anos será cobrado o valor do assento.
 						</p>
 						<h5><b>Atenção:</b> A inscrição não inclui o ônibus. <b class="text-danger">O pagamento do ônibus será feito de forma separada.</b></h5>
 						<h5><b>Atenção:</b> A reserva da vaga no ônibus só será efetivada após o pagamento do valor. <b class="text-danger">Cancelamentos serão permitidos até 7 dias após o pagamento </b></h5>
