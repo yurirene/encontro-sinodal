@@ -154,24 +154,7 @@
 					<h2>Informações</h2>
 					<p>Gerais</p>
 				</div>
-
-				<div class="row">
-					<div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-						<div class="icon-box w-100">
-							<div class="icon text-center"><i class="bi bi-calendar2-event-fill"></i></div>
-							<h4 class="text-center"><a href="">Data</a></h4>
-							<h4 class="text-center">21 a 24 de Outubro</h4>
-						</div>
-					</div>
-
-					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-						<div class="icon-box w-100">
-							<div class="icon text-center"><i class="bi bi-geo-alt-fill"></i></div>
-							<h4 class="text-center"><a href="">Local</a></h4>
-							<h4 class="text-center">Boa Vista - RR <br> </h4>
-						</div>
-					</div>
-
+				<div class="row mt-3">
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
@@ -188,10 +171,6 @@
 							</p>
 						</div>
 					</div>
-
-				</div>
-				<div class="row mt-3">
-
 
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
 						<div class="icon-box w-100">
@@ -212,29 +191,45 @@
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
+							<h4 class="text-center"><a href="">Translado</a></h4>
+							<p class="text-center">
+								<b>Manaus - Boa Vista</b> <br>
+								R$170,00 
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mt-3">
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+						<div class="icon-box w-100">
+							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Crianças</a></h4>
 							<p class="">
 								<b>2 a 5 anos</b> - R$ 50,00* <br> 
-								<b>6 a 10 anos</b> - R$ 80,00* <br> 
+								<b>6 a 9 anos</b> - R$ 80,00* <br> 
 								<b>10 a 12 anos</b> - R$ 100,00* <br> 
 								*Valor da inscrição (não incluso o Ônibus)
 							</p>
 						</div>
 					</div>
-					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
 						<div class="icon-box w-100">
-							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
-							<h4 class="text-center"><a href="">Desistência ou Troca</a></h4>
-							<p class="">
-								<b>Desistência:</b><br> 
-								Até 7 dias após o pagamento: Devolução de 100% <br> 
-								Após 7 dias depois do pagamento: Não haverá devolução <br>
-								<b>Troca:</b><br> 
-								Até dia 30/09/22 é permitida a troca de inscrições <br> 
-							</p>
+							<div class="icon text-center"><i class="bi bi-calendar2-event-fill"></i></div>
+							<h4 class="text-center"><a href="">Data</a></h4>
+							<h4 class="text-center">21 a 24 de Outubro</h4>
+						</div>
+					</div>
+
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+						<div class="icon-box w-100">
+							<div class="icon text-center"><i class="bi bi-geo-alt-fill"></i></div>
+							<h4 class="text-center"><a href="">Local</a></h4>
+							<h4 class="text-center">Boa Vista - RR <br> </h4>
 						</div>
 					</div>
 				</div>
+				
 
 			</div>
 		</section><!-- End Services Section -->
@@ -464,6 +459,15 @@
 								<div class="sent-message">Inscrição Efetuada. Um mensagem foi enviado para o seu e-mail</div>
 							</div>
 							<div class="text-center"><button type="submit">Finalizar</button></div>
+							<p class="">
+								<b>Desistência:</b><br> 
+								Até 7 dias após o pagamento: Devolução de 100% <br> 
+								Após 7 dias depois do pagamento: Não haverá devolução <br>
+								<b>Troca:</b><br> 
+								Até dia 30/09/22 é permitida a troca de inscrições <br> 
+							</p>
+							<br>
+							
 							<p><b><i>Após finalizar será enviado um e-mail para você acompanhar o status da sua inscrição. Caso não encontre, verifique na caixa de spam</i></b></p>
 
 						</form>
