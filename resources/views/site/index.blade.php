@@ -256,7 +256,7 @@
 							</div>
 						</div>
 						<p>
-							<b>Para os encontristas do AMAZONAS</b>: Será alugado um ônibus que sairá de Manaus na noite do dia 21/out (Sexta-feira) e chegará em Boa Vista na manhã do dia 22/out (Sábado).
+							<b>Para os encontristas do AMAZONAS</b>: Será alugado um ônibus que sairá de Manaus <b class="text-danger">na noite do dia 21/out (Sexta-feira)</b>, horário a ser definido, e chegará em Boa Vista na manhã do dia 22/out (Sábado).
 							Voltando dia 24/out (Segunda-feira).
 						</p>
 						<p class="fst-italic">
@@ -266,10 +266,11 @@
 						<p>
 							Quantidade de vagas: 50 <br>
 							Interessados: {{$onibus}} <br>
-							Valor: R$170,00.
-							<b>Crianças:</b> Até 05 anos podem ir no colo, demais casos será cobrado o valor do assento.
+							Valor: R$170,00. <br>
+							<b>Crianças até 05 anos podem ir no colo</b>, demais casos será cobrado o valor do assento.
 						</p>
 						<h5><b>Atenção:</b> A inscrição não inclui o ônibus. <b class="text-danger">O pagamento do ônibus será feito de forma separada.</b></h5>
+						<h5><b>Atenção:</b> A reserva da vaga no ônibus só será efetivada após o pagamento do valor. <b class="text-danger">Cancelamentos serão permitidos até 7 dias após o pagamento </b></h5>
 					</div>
 				</div>
 
