@@ -69,7 +69,11 @@ class InscricaoController extends Controller
                 'onibus' => $request->onibus == 'SIM',
                 'tipo_pagamento' => $request->tipo_pagamento,
                 'quantidade_parcelas' => $request->tipo_pagamento != 'PIX' ? $request->quantidade_parcelas : null,
-                'codigo' => md5($request->email)
+                'codigo' => md5($request->email),
+                'criancas' => $request->criancas,
+                'cat1' => $request->cat1,
+                'cat2' => $request->cat2,
+                'cat3' => $request->cat3,
             ]);
             EnviarEmailService::inscricaoRecebida($inscricao);
             TimelineService::inscrito($inscricao);

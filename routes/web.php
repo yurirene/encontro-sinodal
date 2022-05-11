@@ -4,6 +4,7 @@ use App\Http\Controllers\InscricaoController;
 use App\Http\Controllers\PagamentoController;
 use App\Http\Controllers\PagamentoOnibusController;
 use App\Mail\COLEmail;
+use App\Models\Inscricao;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('site.index');
+    $onibus = Inscricao::where('federacao', '!=', 'FMRR')->where('onibus', true)->get()->count();
+    return view('site.index', [
+        'onibus' => $onibus
+    ]);
 })->name('site.index');
 
 Auth::routes();

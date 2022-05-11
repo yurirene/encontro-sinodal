@@ -156,7 +156,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-calendar2-event-fill"></i></div>
 							<h4 class="text-center"><a href="">Data</a></h4>
@@ -164,7 +164,7 @@
 						</div>
 					</div>
 
-					<div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-geo-alt-fill"></i></div>
 							<h4 class="text-center"><a href="">Local</a></h4>
@@ -172,7 +172,7 @@
 						</div>
 					</div>
 
-					<div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor AM</a></h4>
@@ -189,7 +189,11 @@
 						</div>
 					</div>
 
-					<div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+				</div>
+				<div class="row mt-3">
+
+
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor RR</a></h4>
@@ -205,7 +209,30 @@
 							</p>
 						</div>
 					</div>
-
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+						<div class="icon-box w-100">
+							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
+							<h4 class="text-center"><a href="">Crianças</a></h4>
+							<p class="">
+								<b>2 a 5 anos</b> - R$ 50,00 <br> 
+								<b>6 a 10 anos</b> - R$ 80,00 <br> 
+								<b>10 a 12 anos</b> - R$ 100,00 <br> 
+							</p>
+						</div>
+					</div>
+					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+						<div class="icon-box w-100">
+							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
+							<h4 class="text-center"><a href="">Desistência ou Troca</a></h4>
+							<p class="">
+								<b>Desistência:</b><br> 
+								Até 7 dias após o pagamento: Devolução de 100% <br> 
+								Após 7 dias depois do pagamento: Não haverá devolução <br>
+								<b>Troca:</b><br> 
+								Até dia 30/09/22 é permitida a troca de inscrições <br> 
+							</p>
+						</div>
+					</div>
 				</div>
 
 			</div>
@@ -229,7 +256,7 @@
 							</div>
 						</div>
 						<p>
-							<b>Para os encontristas do Amazonas</b>: Será alugado um ônibus que sairá de Manaus na noite do dia 21/out (Sexta-feira) e chegará em Boa Vista na manhã do dia 22/out (Sábado).
+							<b>Para os encontristas do AMAZONAS</b>: Será alugado um ônibus que sairá de Manaus na noite do dia 21/out (Sexta-feira) e chegará em Boa Vista na manhã do dia 22/out (Sábado).
 							Voltando dia 24/out (Segunda-feira).
 						</p>
 						<p class="fst-italic">
@@ -238,9 +265,10 @@
 						</p>
 						<p>
 							Quantidade de vagas: 50 <br>
-							Interessados: - <br>
+							Interessados: {{$onibus}} <br>
 							Valor: R$170,00.
 						</p>
+						<h5><b>Atenção:</b> A inscrição não inclui o ônibus. <b class="text-danger">O pagamento do ônibus será feito de forma separada.</b></h5>
 					</div>
 				</div>
 
@@ -375,7 +403,6 @@
 										<option value="BOLETO_PARCELADO">PARCELADO (BOLETO)</option>
 									</select>
 								</div>
-								
 								<div class="form-group col-md-6" id="parcelas" style="display: none;">
 									<label for="quantidade_parcelas">Quantidade Parcelas</label>
 									<select class="form-control" name="quantidade_parcelas" id="quantidade_parcelas">
@@ -386,7 +413,47 @@
 									</select>
 									<small id="parcelas_info">Acréscimo de 3 reais por parcela</small>
 								</div>
+								<div class="form-group col-md-6">
+									<label for="criancas">Levará Crianças?</label>
+									<select class="form-control" name="criancas" id="criancas">
+										<option value="N">NÃO</option>
+										<option value="S">SIM</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6" id="criancas_qtd" style="display: none;">
+									<div class="row">
+										<div class="col">
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+												  <span class="input-group-text" id="cat1" style="height: 44px;">2 a 5 anos</span>
+												</div>
+												<input type="number" class="form-control" name="cat1">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col">
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+												<span class="input-group-text" id="cat2" style="height: 44px;">6 a 10 anos</span>
+												</div>
+												<input type="number" class="form-control" name="cat2">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col">
+											<div class="input-group mb-3">
+												<div class="input-group-prepend">
+													<span class="input-group-text" id="cat3" style="height: 44px;">10 a 12 anos</span>
+												</div>
+												<input type="number" class="form-control" name="cat3">
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
+							
 							<div class="my-3">
 								<div class="loading">Loading</div>
 								<div class="error-message"></div>
@@ -455,6 +522,13 @@
 				$('#parcelas_info').show();
 			} else {
 				$('#parcelas_info').hide();
+			}
+		});
+		$('#criancas').on('change', function() {
+			if (this.value != 'N') {
+				$('#criancas_qtd').show();
+			} else {
+				$('#criancas_qtd').hide();
 			}
 		});
 	</script>

@@ -27,6 +27,21 @@
                 </div>
             </div>
         </div>
+        @if($inscrito->criancas == 'S')
+        <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Crianças</span>
+                    <span class="info-box-number">
+                        {!! $inscrito->cat1 > 0 ? '2 a 5 anos: ' . $inscrito->cat1 . '<br>' : '' !!}
+                        {!! $inscrito->cat2 > 0 ? '6 a 10 anos: ' . $inscrito->cat2 . '<br>' : '' !!}                        
+                        {!! $inscrito->cat3 > 0 ? '11 a 12 anos: ' . $inscrito->cat3 : '' !!}
+                    </span>
+                </div>
+            </div>
+        </div>
+        @endif
     </div>
     
     <div class="row">

@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group{{ $errors->has('tipo_pagamento') ? ' has-error' : '' }}">
                     {!! Form::label('tipo_pagamento', 'Pagamento') !!}
-                    {!! Form::select('tipo_pagamento',['PIX' => 'PIX', 'BOLETO' => 'BOLETO', 'BOLETO_PARCELADO' => 'Parcelado (BOLETO)'], null, ['id' => 'tipo_pagamento', 'class' => 'form-control', 'required' => 'required']) !!}
+                    {!! Form::select('tipo_pagamento',['PIX' => 'PIX', 'PIX_PARCELADO' => 'Parcelado (PIX)', 'BOLETO_PARCELADO' => 'Parcelado (BOLETO)'], null, ['id' => 'tipo_pagamento', 'class' => 'form-control', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('tipo_pagamento') }}</small>
                     </div>
                     <div id="parcelas">
