@@ -8,6 +8,7 @@ use App\Services\EnviarEmailService;
 use App\Services\TimelineService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class PagamentoController extends Controller
 {
@@ -58,6 +59,7 @@ class PagamentoController extends Controller
             ]);
         } catch (\Throwable $th) {
             DB::rollBack();
+            Log::erro($th->getMessage());
             return redirect()->route('inscritos.pagamentos.index', ['inscrito' => $inscrito->id])->with([
                 'mensagem' => 'Erro ao realizar operação',
                 'status' => false

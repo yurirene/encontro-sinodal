@@ -427,7 +427,7 @@
 									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
 										<option value="PIX">PIX</option>
 										<option value="PIX_PARCELADO">PARCELADO (PIX)</option>
-										<option value="BOLETO_PARCELADO">PARCELADO (BOLETO)</option>
+										<option value="BOLETO">BOLETO</option>
 									</select>
 								</div>
 								<div class="form-group col-md-6" id="parcelas" style="display: none;">
