@@ -59,7 +59,11 @@ class PagamentoController extends Controller
             ]);
         } catch (\Throwable $th) {
             DB::rollBack();
-            Log::erro($th->getMessage());
+            Log::error([
+                'message' => $th->getMessage(),
+                'file' => $th->getFile(),
+                'line' => $th->getLine()
+            ]);
             return redirect()->route('inscritos.pagamentos.index', ['inscrito' => $inscrito->id])->with([
                 'mensagem' => 'Erro ao realizar operação',
                 'status' => false
