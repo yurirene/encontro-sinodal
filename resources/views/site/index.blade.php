@@ -272,6 +272,34 @@
 
 			</div>
 		</section>
+		
+		<section id="skills" class="skills">
+			<div class="container" data-aos="fade-up">
+
+				<div class="row">
+					<div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+						<img src="/site/assets/img/viagem.svg" class="img-fluid" alt="">
+					</div>
+					<div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+						<h3>Deslocamento da <b>Federação de Roraima</b></h3>
+						<p>
+							<b>Para os encontristas de Roraima</b>
+						</p>
+						<h4>Opção 1:</h4>
+						<p>Carro Próprio</p>
+						<h4>Opção 2:</h4>
+						<p>Carona (cooperação R$20, incluso ida e volta)</p>
+						<p class="fst-italic">
+							Para reserva entre em contato: (95)98416-8003
+							<br>
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		
+		
 		<!-- End ONIBUS -->
 
 
@@ -386,7 +414,7 @@
 									<input type="text" class="form-control" name="igreja" id="igreja" required>
 								</div>
 								<div class="form-group col-md-6">
-									<label for="onibus">Ônibus</label>
+									<label for="onibus">Ônibus (Apenas para o Amazonas)</label>
 									<select class="form-control" name="onibus" id="onibus">
 										<option value="SIM">SIM</option>
 										<option value="NAO">NÃO</option>
