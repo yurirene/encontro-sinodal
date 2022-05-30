@@ -29,4 +29,7 @@
 
 @push('js')
 {!! $dataTable->scripts() !!}
+<script>
+    //console.log('Adicionando console log')
+</script>
 @endpush
