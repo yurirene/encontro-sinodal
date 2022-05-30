@@ -472,7 +472,7 @@
 										<div class="col">
 											<div class="input-group mb-3">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="cat3" style="height: 44px;">10 a 12 anos</span>
+													<span class="input-group-text" id="cat3" style="height: 44px;">11 a 12 anos</span>
 												</div>
 												<input type="number" class="form-control" name="cat3">
 											</div>

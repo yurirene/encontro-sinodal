@@ -76,7 +76,8 @@ class InscricaoController extends Controller
                 'cat3' => $request->cat3,
             ]);
             try{
-            EnviarEmailService::inscricaoRecebida($inscricao);
+                Log::info('Enviar Email para  '. $inscricao->email);
+                EnviarEmailService::inscricaoRecebida($inscricao);
             }catch(Exception $e) {
                 Log::error('Envio de e-mail de inscrição recebida : '.$inscricao->email);
             }
