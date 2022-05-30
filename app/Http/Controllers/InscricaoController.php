@@ -7,6 +7,7 @@ use App\Models\Inscricao;
 use App\Services\EnviarEmailService;
 use App\Services\EnviarMsgService;
 use App\Services\TimelineService;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
