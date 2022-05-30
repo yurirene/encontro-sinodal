@@ -11,7 +11,7 @@
         <div class="col">
             <div class="card card-outline card-primary">
                 <div class="card-header">
-                    Tabela de Usuarios
+                    Tabela de Usuarios de DataTable
                 </div>
                 <div class="card-body">
                     {!! $dataTable->table() !!}
