@@ -435,7 +435,6 @@
 									<select class="form-control" name="quantidade_parcelas" id="quantidade_parcelas">
 										<option value="2">2 parcelas</option>
 										<option value="3">3 parcelas</option>
-										<option value="4">4 parcelas</option>
 									</select>
 									<small id="parcelas_info">Acréscimo de 3 reais por parcela</small>
 								</div>
@@ -553,10 +552,10 @@
 			} else {
 				$('#parcelas').hide();
 			}
-			if (this.value == 'BOLETO_PARCELADO') {
-				$('#parcelas_info').show();
-			} else {
+			if (this.value == 'BOLETO') {
 				$('#parcelas_info').hide();
+			} else {
+				$('#parcelas_info').show();
 			}
 		});
 		$('#criancas').on('change', function() {
