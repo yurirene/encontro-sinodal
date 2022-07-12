@@ -88,6 +88,41 @@ class PagamentoController extends Controller
         }
     }
 
+
+    public function edit(Inscricao $inscrito, Pagamento $pagamento)
+    {
+        return view('admin.pagamentos.form', [
+            'inscrito' => $inscrito,
+            'pagamento' => $pagamento
+        ]);
+    }
+
+    public function update(Inscricao $inscrito, Pagamento $pagamento, array $request)
+    {
+
+        try {
+            $pagamento->update(
+                [
+                    'valor' => $request['valor']
+                ]
+            );
+            if ($pagamento->status == true) {
+                EnviarEmailService::pagamentoRecebido($pagamento);
+                TimelineService::pagamentoRecebido($pagamento);
+            }
+            return redirect()->route('inscritos.pagamentos.index', ['inscrito' => $inscrito->id])->with([
+                'mensagem' => 'Operação Realizada com Sucesso',
+                'status' => true
+            ]);
+        } catch (\Throwable $th) {
+            
+            return redirect()->route('inscritos.pagamentos.index', ['inscrito' => $inscrito->id])->with([
+                'mensagem' => 'Erro ao realizar operação',
+                'status' => false
+            ])->withInput();
+        }
+    }
+
     public function status(Inscricao $inscrito, Pagamento $pagamento)
     {
 

@@ -41,6 +41,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     Route::get('inscritos/{inscrito}/pagamentos', [PagamentoController::class, 'index'])->name('inscritos.pagamentos.index');
     Route::get('inscritos/{inscrito}/pagamentos/create', [PagamentoController::class, 'create'])->name('inscritos.pagamentos.create');
     Route::get('inscritos/{inscrito}/pagamentos/{pagamento}/status', [PagamentoController::class, 'status'])->name('inscritos.pagamentos.status');
+    Route::get('inscritos/{inscrito}/pagamentos/{pagamento}/edit', [PagamentoController::class, 'edit'])->name('inscritos.pagamentos.edit');
+    Route::put('inscritos/{inscrito}/pagamentos/{pagamento}/update', [PagamentoController::class, 'update'])->name('inscritos.pagamentos.update');
     Route::get('inscritos/{inscrito}/pagamentos/{pagamento}/delete', [PagamentoController::class, 'delete'])->name('inscritos.pagamentos.delete');
     Route::post('inscritos/{inscrito}/pagamentos/store', [PagamentoController::class, 'store'])->name('inscritos.pagamentos.store');
 

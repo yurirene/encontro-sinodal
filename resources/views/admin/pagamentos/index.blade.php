@@ -78,6 +78,7 @@
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item" href="{{ route('inscritos.pagamentos.status', ['inscrito' => $inscrito->id, 'pagamento' => $pagamento->id]) }}">Status</a>
+                                                <a class="dropdown-item" href="{{ route('inscritos.pagamentos.edit', ['inscrito' => $inscrito->id, 'pagamento' => $pagamento->id]) }}">Editar Valor</a>
                                             </div>
                                         </div>
                                     </td>
