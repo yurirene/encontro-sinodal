@@ -97,13 +97,13 @@ class PagamentoController extends Controller
         ]);
     }
 
-    public function update(Inscricao $inscrito, Pagamento $pagamento, array $request)
+    public function update(Inscricao $inscrito, Pagamento $pagamento, Request $request)
     {
 
         try {
             $pagamento->update(
                 [
-                    'valor' => $request['valor']
+                    'valor' => $request->valor
                 ]
             );
             if ($pagamento->status == true) {
