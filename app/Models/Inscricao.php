@@ -79,4 +79,9 @@ class Inscricao extends Model
     {
         return $this->hasMany(PagamentoOnibus::class);
     }
+
+    public function confirmacaoOnibus()
+    {
+        return $this->hasOne(OnibusConfirmado::class, 'inscrito_id');
+    }
 }
