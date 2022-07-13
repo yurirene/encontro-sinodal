@@ -23,7 +23,7 @@
                 <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
                 <div class="info-box-content">
                     <span class="info-box-text">Status do Onibus</span>
-                    <span class="info-box-number">X</span>
+                    <span class="info-box-number">{{ $inscrito->confirmacaoOnibus()->exists() ? 'Confirmado' : '-' }}</span>
                 </div>
             </div>
         </div>
@@ -39,10 +39,19 @@
                     <div class="row">
                         <div class="col">
                             <a href="{{route('inscritos.onibus.create', $inscrito->id)}}" class="btn btn-secondary">Novo Pagamento</a>
-                            <a href="#" class="btn btn-success">Confirmar Ônibus</a>
                             <a href="{{route('inscritos.index')}}" class="btn btn-secondary">Voltar</a>
                         </div>
                     </div>
+                    @if(! $inscrito->confirmacaoOnibus()->exists())
+                    <div class="row mt-3">
+                        <div class="col"> 
+                            {!! Form::open(['method' => 'POST', 'url' => route('inscritos.onibus.confirmar')]) !!}
+                            {!! Form::hidden('inscrito_id', $inscrito->id) !!}
+                            <button type="submit" class="btn btn-success">Confirmar Ônibus</button>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                    @endif
                     <div class="table-responsive mt-5">
                         <table class="table">
                             <thead>

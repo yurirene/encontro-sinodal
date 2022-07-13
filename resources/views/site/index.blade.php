@@ -245,9 +245,9 @@
 						<h3>Ônibus Manaus - Boa Vista</h3>
 						<div class="skills-content">
 							<div class="progress">
-								<span class="skill">Vagas Preenchidas <i class="val">0%</i></span>
+								<span class="skill">Vagas Preenchidas <i class="val">{{number_format(($total_onibus_confirmado * 100)/50, 2)}}%</i></span>
 								<div class="progress-bar-wrap">
-									<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" aria-valuenow="{{number_format(($total_onibus_confirmado * 100)/50, 2)}}" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</div>
 						</div>
@@ -263,6 +263,7 @@
 							Quantidade de vagas: 50 <br>
 							Interessados: {{$onibus}} <br>
 							Valor: R$170,00. <br>
+							Confirmados: {{$total_onibus_confirmado}} <br>
 							<b>Crianças até 05 anos podem ir no colo</b>, a partir de 06 anos será cobrado o valor do assento.
 						</p>
 						<h5><b>Atenção:</b> A inscrição não inclui o ônibus. <b class="text-danger">O pagamento do ônibus será feito de forma separada.</b></h5>

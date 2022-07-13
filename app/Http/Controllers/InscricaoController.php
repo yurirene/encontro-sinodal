@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\DataTables\InscritosDataTable;
 use App\Models\Inscricao;
+use App\Models\Pagamento;
+use App\Models\PagamentoOnibus;
 use App\Services\EnviarEmailService;
 use App\Services\EnviarMsgService;
 use App\Services\TimelineService;
@@ -17,7 +19,23 @@ class InscricaoController extends Controller
 
     public function index(InscritosDataTable $dataTable)
     {
-        return $dataTable->render('admin.inscritos.index');
+        $total_pagamento = 0;
+        Pagamento::where('status', 1)->get()->each(function($item) use (&$total_pagamento) {
+            $total_pagamento += floatval(str_replace(',', '.', $item->valor));
+        });
+        $total_pagamento_onibus = 0;
+        PagamentoOnibus::where('status', 1)->get()->each(function($item) use (&$total_pagamento_onibus) {
+            $total_pagamento_onibus += floatval(str_replace(',', '.', $item->valor));
+        });
+        $totalizador = [
+            'inscritos' => Inscricao::all()->count(),
+            'inscritos_confirmados' => Inscricao::where('status', 2)->get()->count(),
+            'total_recebido' => $total_pagamento,
+            'total_onibus_recebido' => $total_pagamento_onibus
+        ];
+        return $dataTable->render('admin.inscritos.index', [
+            'totalizador' => $totalizador
+        ]);
     }
 
     public function edit(Inscricao $inscrito)
@@ -141,4 +159,5 @@ class InscricaoController extends Controller
             'inscricao' => $inscricao
         ]);
     }
+    
 }

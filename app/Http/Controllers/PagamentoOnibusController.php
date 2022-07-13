@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inscricao;
+use App\Models\OnibusConfirmado;
 use App\Models\PagamentoOnibus;
 use App\Services\EnviarEmailService;
 use App\Services\TimelineService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class PagamentoOnibusController extends Controller
 {
@@ -58,6 +60,11 @@ class PagamentoOnibusController extends Controller
             ]);
         } catch (\Throwable $th) {
             DB::rollBack();
+            Log::error([
+                'message' => $th->getMessage(),
+                'line' => $th->getLine(),
+                'file' => $th->getFile()
+            ]);
             return redirect()->route('inscritos.onibus.index', ['inscrito' => $inscrito->id])->with([
                 'mensagem' => 'Erro ao realizar operação',
                 'status' => false
@@ -102,6 +109,28 @@ class PagamentoOnibusController extends Controller
         } catch (\Throwable $th) {
             
             return redirect()->route('inscritos.onibus.index', ['inscrito' => $inscrito->id])->with([
+                'mensagem' => 'Erro ao realizar operação',
+                'status' => false
+            ])->withInput();
+        }
+    }
+
+    public function confirmacaoOnibus(Request $request)
+    {
+        try {
+            OnibusConfirmado::updateOrCreate(
+                [
+                    'inscrito_id' => $request->inscrito_id
+                ],[
+                'inscrito_id' => $request->inscrito_id
+            ]);
+            return redirect()->route('inscritos.onibus.index', ['inscrito' => $request->inscrito_id])->with([
+                'mensagem' => 'Operação Realizada com Sucesso',
+                'status' => true
+            ]);
+        } catch (\Throwable $th) {
+            dd($th->getMessage());
+            return redirect()->route('inscritos.onibus.index', ['inscrito' => $request->inscrito_id])->with([
                 'mensagem' => 'Erro ao realizar operação',
                 'status' => false
             ])->withInput();

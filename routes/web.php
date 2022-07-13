@@ -5,6 +5,7 @@ use App\Http\Controllers\PagamentoController;
 use App\Http\Controllers\PagamentoOnibusController;
 use App\Mail\COLEmail;
 use App\Models\Inscricao;
+use App\Models\OnibusConfirmado;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -22,8 +23,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $onibus = Inscricao::where('federacao', '!=', 'FMRR')->where('onibus', true)->get()->count();
+    $total_onibus_confirmado = OnibusConfirmado::all()->count();
     return view('site.index', [
-        'onibus' => $onibus
+        'onibus' => $onibus,
+        'total_onibus_confirmado' => $total_onibus_confirmado
     ]);
 })->name('site.index');
 
@@ -50,4 +53,5 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     Route::get('inscritos/{inscrito}/onibus/create', [PagamentoOnibusController::class, 'create'])->name('inscritos.onibus.create');
     Route::get('inscritos/{inscrito}/onibus/{pagamento}/delete', [PagamentoOnibusController::class, 'delete'])->name('inscritos.onibus.delete');
     Route::post('inscritos/{inscrito}/onibus/store', [PagamentoOnibusController::class, 'store'])->name('inscritos.onibus.store');
+    Route::post('inscritos/onibus/confirmar', [PagamentoOnibusController::class, 'confirmacaoOnibus'])->name('inscritos.onibus.confirmar');
 });
