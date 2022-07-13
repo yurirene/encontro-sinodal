@@ -159,4 +159,5 @@ class InscricaoController extends Controller
             'inscricao' => $inscricao
         ]);
     }
+    
 }

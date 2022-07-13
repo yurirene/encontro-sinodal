@@ -25,7 +25,8 @@ class InscritosDataTable extends DataTable
                 return view('includes.actions', [
                     'route' => 'inscritos',
                     'id' => $sql->id,
-                    'onibus' => $sql->onibus ? true : false
+                    'onibus' => $sql->onibus ? true : false,
+                    'msg' => $sql->msg
                 ]);
             })
             ->editColumn('created_at', function($sql) {
