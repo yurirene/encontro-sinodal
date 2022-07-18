@@ -34,6 +34,19 @@
 	* Author: BootstrapMade.com
 	* License: https://bootstrapmade.com/license/
 	======================================================== -->
+
+	<style>
+		.check {
+			position: relative !important;
+			display: inline-block !important;
+			border: 1px solid #a9a9a9 !important;
+			border-radius: .25em !important;
+			width: 1.3em !important;
+			height: 1.3em !important;
+			float: left !important;
+			margin-right: .5em !important;
+		}
+	</style>
 </head>
 
 <body>
@@ -477,6 +490,16 @@
 											</div>
 										</div>
 									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input check" type="checkbox" value="sim" name="promocao" id="defaultCheck1">
+										<label class="form-check-label" for="defaultCheck1">
+										  Inscrição Promocional (Grupo de 3 ou mais)
+										</label>
+									  </div>
 								</div>
 							</div>
 							

@@ -39,6 +39,7 @@ class EnviarMsgService
             $mensagem .= '11 a 12: ' . ($inscricao->cat3 ?? '0') . PHP_EOL; 
         }
         $mensagem .= 'Ônibus: ' . ($inscricao->onibus==1 ? 'Sim' : 'Não') . PHP_EOL;
+        $mensagem .= 'Promoção: ' . ($inscricao->promocao != null ? 'Sim' : 'Não') . PHP_EOL;
         
         self::sendMessage($mensagem);
 

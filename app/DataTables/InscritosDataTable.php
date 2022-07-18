@@ -35,6 +35,13 @@ class InscritosDataTable extends DataTable
             ->editColumn('status', function($sql) {
                 return '<span class="badge badge-'. Inscricao::LABELS[$sql->status]['label'] .'">'. Inscricao::LABELS[$sql->status]['text'] .'</span>';
             })
+
+            ->editColumn('status', function($sql) {
+                if (is_null($sql->promocao)) {
+                    return  '';
+                }
+                return '<span class="badge badge-success">PROMOÇÃO</span>';
+            })
             ->rawColumns(['status']);
     }
 
@@ -85,6 +92,7 @@ class InscritosDataTable extends DataTable
                   ->addClass('text-center')
                   ->title('Ação'),
             Column::make('nome')->title('Nome'),
+            Column::make('promocao')->title('Promoção'),
             Column::make('federacao')->title('Federação'),
             Column::make('igreja')->title('Igreja'),
             Column::make('celular')->title('Celular'),
