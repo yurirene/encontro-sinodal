@@ -99,7 +99,6 @@ class InscritosDataTable extends DataTable
             Column::make('tipo_pagamento')->title('Pagamento'),
             Column::make('quantidade_parcelas')->title('Parcelas'),
             Column::make('status')->title('Status'),
-            Column::make('promocao')->title('Promoção'),
             Column::make('created_at')->title('Inscrito Em'),
         ];
     }
