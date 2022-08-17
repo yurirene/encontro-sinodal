@@ -47,6 +47,24 @@
             </div>
         </div>
     </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box">
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-bus"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Ônibus Confirmado</span>
+                <span class="info-box-number">{{$totalizador['total_onibus_confirmado']}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box">
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-bus"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">Ônibus Não Confirmado</span>
+                <span class="info-box-number">{{$totalizador['total_onibus_nao_confirmado']}}</span>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row">
     @foreach($total_por_federacao as $federacao => $status)

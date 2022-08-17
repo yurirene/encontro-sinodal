@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DataTables\InscritosDataTable;
 use App\Models\Inscricao;
+use App\Models\OnibusConfirmado;
 use App\Models\Pagamento;
 use App\Models\PagamentoOnibus;
 use App\Services\EnviarEmailService;
@@ -28,6 +29,9 @@ class InscricaoController extends Controller
             $total_pagamento_onibus += floatval(str_replace(',', '.', $item->valor));
         });
 
+        $total_onibus_confirmado = OnibusConfirmado::count();
+        $total_onibus_nao_confirmado = Inscricao::whereDoesntHave('confirmacaoOnibus')->count();
+
         $todos_inscritos_por_federacao = Inscricao::selectRaw("federacao, 
         count(*) as total, 
         CASE 
@@ -49,6 +53,8 @@ class InscricaoController extends Controller
             'inscritos_confirmados' => Inscricao::where('status', 2)->get()->count(),
             'total_recebido' => $total_pagamento,
             'total_onibus_recebido' => $total_pagamento_onibus,
+            'total_onibus_confirmado' => $total_onibus_confirmado,
+            'total_onibus_nao_confirmado' => $total_onibus_nao_confirmado
         ];
         return $dataTable->render('admin.inscritos.index', [
             'totalizador' => $totalizador,
