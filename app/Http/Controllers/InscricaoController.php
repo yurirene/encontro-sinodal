@@ -30,7 +30,7 @@ class InscricaoController extends Controller
         });
 
         $total_onibus_confirmado = OnibusConfirmado::count();
-        $total_onibus_nao_confirmado = Inscricao::whereDoesntHave('confirmacaoOnibus')->count();
+        $total_onibus_nao_confirmado = Inscricao::whereDoesntHave('confirmacaoOnibus')->where('onibus',1)->count();
 
         $todos_inscritos_por_federacao = Inscricao::selectRaw("federacao, 
         count(*) as total, 
