@@ -42,7 +42,13 @@ class InscritosDataTable extends DataTable
                 }
                 return '<span class="badge badge-success">PROMOÇÃO</span>';
             })
-            ->rawColumns(['status', 'promocao']);
+            ->editColumn('onibus', function($sql) {
+                if ($sql->onibus == 0) {
+                    return  '';
+                }
+                return '<span class="badge badge-success">Sim</span>';
+            })
+            ->rawColumns(['status', 'promocao', 'onibus']);
     }
 
     /**
@@ -99,6 +105,7 @@ class InscritosDataTable extends DataTable
             Column::make('tipo_pagamento')->title('Pagamento'),
             Column::make('quantidade_parcelas')->title('Parcelas'),
             Column::make('status')->title('Status'),
+            Column::make('onibus')->title('Ônibus'),
             Column::make('created_at')->title('Inscrito Em'),
         ];
     }
