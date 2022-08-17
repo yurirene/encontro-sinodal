@@ -27,14 +27,32 @@ class InscricaoController extends Controller
         PagamentoOnibus::where('status', 1)->get()->each(function($item) use (&$total_pagamento_onibus) {
             $total_pagamento_onibus += floatval(str_replace(',', '.', $item->valor));
         });
+
+        $todos_inscritos_por_federacao = Inscricao::selectRaw("federacao, 
+        count(*) as total, 
+        CASE 
+            WHEN status = 1 THEN 'Incompleto' 
+            WHEN status = 2 THEN 'Confirmado' 
+            ELSE 'Aberto'
+        END status"
+        )->groupBy(['federacao', 'status'])
+        ->get();
+
+        $inscritos_por_federacao = [];
+        foreach ($todos_inscritos_por_federacao->unique('federacao')->pluck('federacao') as $federacao) {
+            $todos_inscritos_por_federacao->where('federacao', $federacao)->map(function($item) use (&$inscritos_por_federacao) {
+                $inscritos_por_federacao[$item['federacao']][$item['status']] = $item['total'];
+            });
+        }
         $totalizador = [
             'inscritos' => Inscricao::all()->count(),
             'inscritos_confirmados' => Inscricao::where('status', 2)->get()->count(),
             'total_recebido' => $total_pagamento,
-            'total_onibus_recebido' => $total_pagamento_onibus
+            'total_onibus_recebido' => $total_pagamento_onibus,
         ];
         return $dataTable->render('admin.inscritos.index', [
-            'totalizador' => $totalizador
+            'totalizador' => $totalizador,
+            'total_por_federacao' => $inscritos_por_federacao
         ]);
     }
 
