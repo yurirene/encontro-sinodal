@@ -2,14 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Inscricao;
-use Yajra\DataTables\Html\Button;
+use App\Models\Camisa;
 use Yajra\DataTables\Html\Column;
-use Yajra\DataTables\Html\Editor\Editor;
-use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class InscritosDataTable extends DataTable
+class CamisaDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -23,42 +20,30 @@ class InscritosDataTable extends DataTable
             ->eloquent($query)
             ->addColumn('action', function($sql) {
                 return view('includes.actions', [
-                    'route' => 'inscritos',
-                    'pagamento' => true,
+                    'route' => 'camisas',
+                    'onibus' => false,
+                    'edit' => false,
+                    'delete' => false,
                     'id' => $sql->id,
-                    'onibus' => $sql->onibus ? true : false,
-                    'msg' => $sql->msg
+                    'status' => true
                 ]);
             })
             ->editColumn('created_at', function($sql) {
                 return $sql->criado_em;
             })
             ->editColumn('status', function($sql) {
-                return '<span class="badge badge-'. Inscricao::LABELS[$sql->status]['label'] .'">'. Inscricao::LABELS[$sql->status]['text'] .'</span>';
+                return '<span class="badge badge-'. Camisa::LABELS[$sql->status]['label'] .'">'. Camisa::LABELS[$sql->status]['text'] .'</span>';
             })
-
-            ->editColumn('promocao', function($sql) {
-                if (is_null($sql->promocao)) {
-                    return  '';
-                }
-                return '<span class="badge badge-success">PROMOÇÃO</span>';
-            })
-            ->editColumn('onibus', function($sql) {
-                if ($sql->onibus == 0) {
-                    return  '';
-                }
-                return '<span class="badge badge-success">Sim</span>';
-            })
-            ->rawColumns(['status', 'promocao', 'onibus']);
+            ->rawColumns(['status']);
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Inscricao $model
+     * @param \App\Models\Camisa $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Inscricao $model)
+    public function query(Camisa $model)
     {
         return $model->newQuery();
     }
@@ -71,11 +56,11 @@ class InscritosDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-                    ->setTableId('inscritos-datatable-table')
+                    ->setTableId('camisas-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
-                    ->orderBy(8, 'desc')
+                    ->orderBy(1, 'desc')
                     ->parameters([
                         'language' => [
                             "url" => "//cdn.datatables.net/plug-ins/1.10.24/i18n/Portuguese-Brasil.json"
@@ -99,15 +84,12 @@ class InscritosDataTable extends DataTable
                   ->addClass('text-center')
                   ->title('Ação'),
             Column::make('nome')->title('Nome'),
-            Column::make('promocao')->title('Promoção'),
+            Column::make('quantidade')->title('Quantidade'),
             Column::make('federacao')->title('Federação'),
             Column::make('igreja')->title('Igreja'),
             Column::make('celular')->title('Celular'),
-            Column::make('tipo_pagamento')->title('Pagamento'),
-            Column::make('quantidade_parcelas')->title('Parcelas'),
             Column::make('status')->title('Status'),
-            Column::make('onibus')->title('Ônibus'),
-            Column::make('created_at')->title('Inscrito Em'),
+            Column::make('created_at')->title('Solicitado Em'),
         ];
     }
 
@@ -118,6 +100,6 @@ class InscritosDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'Inscricaos_' . date('YmdHis');
+        return 'Camisas_' . date('YmdHis');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Camisa;
 use App\Models\Inscricao;
 use TelegramBot\Api\BotApi;
 
@@ -20,6 +21,19 @@ class EnviarMsgService
         return $obBotApi->sendMessage(config('app.telegram_chat_id'), $message);
     }
 
+    public static function novaCamisa(Camisa $inscricao)
+    {
+        $mensagem = '';
+        $mensagem .= 'Solicitação de Camisa' . PHP_EOL . PHP_EOL;
+        $mensagem .= 'Nome: ' . $inscricao->nome . PHP_EOL;
+        $mensagem .= 'Celular: ' . $inscricao->celular . PHP_EOL;
+        $mensagem .= 'Federação: ' . $inscricao->federacao . PHP_EOL; 
+        $mensagem .= 'Igreja: ' . $inscricao->igreja . PHP_EOL; 
+        $mensagem .= 'Quantidade: ' . $inscricao->quantidade . PHP_EOL;
+        
+        self::sendMessage($mensagem);
+
+    }
     public static function novaInscricao(Inscricao $inscricao)
     {
         $mensagem = '';

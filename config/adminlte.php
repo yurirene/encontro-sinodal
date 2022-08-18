@@ -230,6 +230,11 @@ return [
             'route'         => 'inscritos.index',
             'icon'        => 'fas fa-users',
         ],
+        [
+            'text'        => 'Camisa',
+            'route'         => 'camisas.index',
+            'icon'        => 'fas fa-tshirt',
+        ],
     ],
 
     /*
