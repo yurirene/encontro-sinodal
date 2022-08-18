@@ -433,7 +433,7 @@
 										<option value="BOLETO">BOLETO</option>
 									</select>
 
-									<small id="parcelas_info">Acréscimo de 3 reais na forma de Boleto</small>
+									<small>Acréscimo de 3 reais na forma de Boleto</small>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="criancas">Levará Crianças?</label>
