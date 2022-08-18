@@ -173,11 +173,6 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor AM</a></h4>
 							<p class="text-center">
-								<b>09/05/22 - 31/07/22</b>
-								<br>
-								R$130,00 (Ônibus não incluso)
-								<br>
-								<br>
 								<b>01/08/22 - 30/09/22</b>
 								<br>
 								R$130,00 (Ônibus não incluso)
@@ -190,11 +185,6 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center"><a href="">Valor RR</a></h4>
 							<p class="text-center">
-								<b>09/05/22 - 31/07/22</b>
-								<br>
-								R$140,00
-								<br>
-								<br>
 								<b>01/08/22 - 30/09/22</b>
 								<br>
 								R$160,00 
@@ -258,9 +248,9 @@
 						<h3>Ônibus Manaus - Boa Vista</h3>
 						<div class="skills-content">
 							<div class="progress">
-								<span class="skill">Vagas Preenchidas <i class="val">{{number_format(($total_onibus_confirmado * 100)/50, 2)}}%</i></span>
+								<span class="skill">Vagas Preenchidas <i class="val">{{number_format(($total_onibus_confirmado * 100)/44, 2)}}%</i></span>
 								<div class="progress-bar-wrap">
-									<div class="progress-bar" role="progressbar" aria-valuenow="{{number_format(($total_onibus_confirmado * 100)/50, 2)}}" aria-valuemin="0" aria-valuemax="100"></div>
+									<div class="progress-bar" role="progressbar" aria-valuenow="{{number_format(($total_onibus_confirmado * 100)/44, 2)}}" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 							</div>
 						</div>
@@ -273,7 +263,7 @@
 							<br>
 						</p>
 						<p>
-							Quantidade de vagas: 50 <br>
+							Quantidade de vagas: 44 <br>
 							Interessados: {{$onibus}} <br>
 							Valor: R$170,00. <br>
 							Confirmados: {{$total_onibus_confirmado}} <br>
@@ -440,16 +430,10 @@
 									<label for="tipo_pagamento">Forma de Pagamento</label>
 									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
 										<option value="PIX">PIX</option>
-										<option value="PIX_PARCELADO">PARCELADO (PIX)</option>
 										<option value="BOLETO">BOLETO</option>
 									</select>
-								</div>
-								<div class="form-group col-md-6" id="parcelas" style="display: none;">
-									<label for="quantidade_parcelas">Quantidade Parcelas</label>
-									<select class="form-control" name="quantidade_parcelas" id="quantidade_parcelas">
-										<option value="2">2 parcelas</option>
-									</select>
-									<small id="parcelas_info">Acréscimo de 3 reais por parcela</small>
+
+									<small id="parcelas_info">Acréscimo de 3 reais na forma de Boleto</small>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="criancas">Levará Crianças?</label>
@@ -490,18 +474,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col">
-									<div class="form-check">
-										<input class="form-check-input check" type="checkbox" value="sim" name="promocao" id="defaultCheck1">
-										<label class="form-check-label" for="defaultCheck1">
-										  Inscrição Promocional (Grupo de 3 ou mais)
-										</label>
-									  </div>
-								</div>
-							</div>
-							
+							</div>							
 							<div class="my-3">
 								<div class="loading">Loading</div>
 								<div class="error-message"></div>
