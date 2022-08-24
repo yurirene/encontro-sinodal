@@ -39,7 +39,8 @@ class CamisaController extends Controller
                 'celular' => $request->celular,
                 'federacao' => $request->federacao,
                 'igreja' => $request->igreja,
-                'quantidade' => $request->quantidade
+                'quantidade' => $request->quantidade,
+                'tamanho' => $request->tamanho
             ]);
             EnviarMsgService::novaCamisa($camisa);
             DB::commit();
