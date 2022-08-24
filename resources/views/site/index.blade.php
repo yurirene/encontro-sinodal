@@ -62,7 +62,7 @@
 			<nav id="navbar" class="navbar">
 				<ul>
 					<li><a class="nav-link scrollto active" href="#about">Informações</a></li>
-					{{-- <li><a class="nav-link scrollto active" href="{{route('site.camisa')}}">Camisa</a></li> --}}
+					<li><a class="nav-link scrollto active" href="{{route('site.camisa')}}">Camisa</a></li>
 					<li><a class="getstarted scrollto" href="#contact">Inscrever-se</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
