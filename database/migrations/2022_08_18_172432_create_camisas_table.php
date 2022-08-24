@@ -19,6 +19,7 @@ class CreateCamisasTable extends Migration
             $table->string('celular');
             $table->string('federacao');
             $table->string('igreja');
+            $table->string('tamanho');
             $table->string('quantidade');
             $table->boolean('status')->default(false);
             $table->timestamps();

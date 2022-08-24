@@ -93,7 +93,7 @@
 
 							<br><br>
 
-							<h2 class="text-center">R$ 30,00</h2>
+							<h2 class="text-center">R$ 35,00</h2>
 						</div>
 					</div>
 				</div>
@@ -128,7 +128,8 @@
 							<div class="row">
 								<div class="form-group col-md-6">
 									<label for="federacao">Federação</label>
-									<select class="form-control" name="federacao" id="federacao">
+									<select class="form-control" name="federacao" id="federacao" required>
+										<option value="">Selecione uma Federação</option>
 										<option value="FAMP">FAMP</option>
 										<option value="FEPAM">FEPAM</option>
 										<option value="FMS">FMS</option>
@@ -147,6 +148,17 @@
 								<div class="form-group col-md-6">
 									<label for="quantidade">Quantidade</label>
 									<input type="number" step="1" min="1" value="1" class="form-control" name="quantidade" id="quantidade" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="tamanho">Tamanho</label>
+									<select class="form-control" name="tamanho" id="tamanho" required>
+										<option value="">Selecione um tamanho</option>
+										<option value="PP">PP</option>
+										<option value="P">P</option>
+										<option value="M">M</option>
+										<option value="G">G</option>
+										<option value="GG">GG</option>
+									</select>
 								</div>
 							</div>
 							
