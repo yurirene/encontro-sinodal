@@ -118,6 +118,6 @@ class InscritosDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'Inscricaos_' . date('YmdHis');
+        return 'Inscricoes_' . date('YmdHis');
     }
 }
