@@ -89,6 +89,7 @@ class CamisaDataTable extends DataTable
             Column::make('igreja')->title('Igreja'),
             Column::make('celular')->title('Celular'),
             Column::make('status')->title('Status'),
+            Column::make('tamanho')->title('Tamanho'),
             Column::make('created_at')->title('Solicitado Em'),
         ];
     }
