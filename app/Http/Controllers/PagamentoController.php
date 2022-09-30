@@ -125,7 +125,6 @@ class PagamentoController extends Controller
 
     public function status(Inscricao $inscrito, Pagamento $pagamento)
     {
-        dd('a');
 
         try {
             $pagamento->update(
