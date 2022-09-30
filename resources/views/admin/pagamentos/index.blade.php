@@ -79,6 +79,7 @@
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item" href="{{ route('inscritos.pagamentos.status', ['inscrito' => $inscrito->id, 'pagamento' => $pagamento->id]) }}">Status</a>
                                                 <a class="dropdown-item" href="{{ route('inscritos.pagamentos.edit', ['inscrito' => $inscrito->id, 'pagamento' => $pagamento->id]) }}">Editar Valor</a>
+                                                <button class="dropdown-item" href="#" onclick="deleteRegistro('{{ route('inscritos.pagamentos.delete', ['inscrito' => $inscrito->id, 'pagamento' => $pagamento->id]) }}')">Apagar</button>
                                             </div>
                                         </div>
                                     </td>
