@@ -55,6 +55,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function() {
     
     Route::get('inscritos/{inscrito}/onibus', [PagamentoOnibusController::class, 'index'])->name('inscritos.onibus.index');
     Route::get('inscritos/{inscrito}/onibus/create', [PagamentoOnibusController::class, 'create'])->name('inscritos.onibus.create');
+    Route::get('inscritos/{inscrito}/onibus/{pagamento}/status', [PagamentoOnibusController::class, 'status'])->name('inscritos.onibus.status');
     Route::get('inscritos/{inscrito}/onibus/{pagamento}/delete', [PagamentoOnibusController::class, 'delete'])->name('inscritos.onibus.delete');
     Route::post('inscritos/{inscrito}/onibus/store', [PagamentoOnibusController::class, 'store'])->name('inscritos.onibus.store');
     Route::post('inscritos/onibus/confirmar', [PagamentoOnibusController::class, 'confirmacaoOnibus'])->name('inscritos.onibus.confirmar');

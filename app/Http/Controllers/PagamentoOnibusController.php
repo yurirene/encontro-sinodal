@@ -49,7 +49,7 @@ class PagamentoOnibusController extends Controller
                 TimelineService::pagamentoRecebidoOnibus($pagamento);
             } else {
                 EnviarEmailService::aguardandoPagamentoOnibus($pagamento);
-                TimelineService::aguardandoPagamentoOnibus($pagamento);
+                // TimelineService::aguardandoPagamentoOnibus($pagamento);
             }
             
             DB::commit();
