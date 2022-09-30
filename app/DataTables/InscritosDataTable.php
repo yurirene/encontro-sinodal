@@ -47,7 +47,7 @@ class InscritosDataTable extends DataTable
                 if ($sql->onibus == 0) {
                     return  '';
                 }
-                return '<span class="badge badge-success">Sim</span>';
+                return $sql->confirmacaoOnibus()->exists() ? '<span class="badge badge-success">Confirmado</span>' : '<span class="badge badge-danger">Pendente</span>';
             })
             ->rawColumns(['status', 'promocao', 'onibus']);
     }
