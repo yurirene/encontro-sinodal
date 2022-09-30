@@ -129,8 +129,24 @@ class PagamentoOnibusController extends Controller
                 'status' => true
             ]);
         } catch (\Throwable $th) {
-            dd($th->getMessage());
             return redirect()->route('inscritos.onibus.index', ['inscrito' => $request->inscrito_id])->with([
+                'mensagem' => 'Erro ao realizar operação',
+                'status' => false
+            ])->withInput();
+        }
+    }
+
+    public function cancelarOnibus(Inscricao $inscrito) 
+    {
+
+        try {
+            $inscrito->confirmacaoOnibus()->delete();
+            return redirect()->route('inscritos.onibus.index', ['inscrito' => $inscrito->id])->with([
+                'mensagem' => 'Operação Realizada com Sucesso',
+                'status' => true
+            ]);
+        } catch (\Throwable $th) {
+            return redirect()->route('inscritos.onibus.index', ['inscrito' => $inscrito->id])->with([
                 'mensagem' => 'Erro ao realizar operação',
                 'status' => false
             ])->withInput();

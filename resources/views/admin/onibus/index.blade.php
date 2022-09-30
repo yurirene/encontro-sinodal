@@ -40,6 +40,9 @@
                         <div class="col">
                             <a href="{{route('inscritos.onibus.create', $inscrito->id)}}" class="btn btn-secondary">Novo Pagamento</a>
                             <a href="{{route('inscritos.index')}}" class="btn btn-secondary">Voltar</a>
+                            @if($inscrito->confirmacaoOnibus()->exists())
+                            <a href="{{route('inscritos.onibus.cancelar', $inscrito->id)}}" class="btn btn-secondary">Cancelar Ônibus</a>
+                            @endif
                         </div>
                     </div>
                     @if(! $inscrito->confirmacaoOnibus()->exists())
