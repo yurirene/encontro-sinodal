@@ -33,6 +33,12 @@ class InscritosDataTable extends DataTable
             ->editColumn('created_at', function($sql) {
                 return $sql->criado_em;
             })
+            ->addColumn('total_pago', function($sql) {
+                return $sql->total_pago;
+            })
+            ->addColumn('total_pago_onibus', function($sql) {
+                return $sql->total_pago_onibus;
+            })
             ->editColumn('status', function($sql) {
                 return '<span class="badge badge-'. Inscricao::LABELS[$sql->status]['label'] .'">'. Inscricao::LABELS[$sql->status]['text'] .'</span>';
             })
@@ -104,7 +110,8 @@ class InscritosDataTable extends DataTable
             Column::make('igreja')->title('Igreja'),
             Column::make('celular')->title('Celular'),
             Column::make('tipo_pagamento')->title('Pagamento'),
-            Column::make('quantidade_parcelas')->title('Parcelas'),
+            Column::make('total_pago')->title('Total Pago'),
+            Column::make('total_pago_onibus')->title('Total Pago ônibus'),
             Column::make('status')->title('Status'),
             Column::make('onibus')->title('Ônibus'),
             Column::make('created_at')->title('Inscrito Em'),
