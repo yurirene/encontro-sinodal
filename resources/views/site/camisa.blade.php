@@ -113,7 +113,7 @@
 				<div class="row">
 					<div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 						
-						<form action="{{route('camisa.store')}}" method="post" role="form" class="php-email-form">
+						<form role="form" class="php-email-form">
 							@csrf
 							<div class="row">
 								<div class="form-group col-md-6">
