@@ -317,7 +317,7 @@
 				<div class="row">
 					<div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 						
-						<form action="{{route('inscricao.store')}}" method="post" role="form" class="php-email-form">
+						<form role="form" class="php-email-form">
 							@csrf
 							<div class="row">
 								<div class="form-group col-md-6">
@@ -415,7 +415,7 @@
 								<div class="error-message"></div>
 								<div class="sent-message">Inscrição Efetuada. Um mensagem foi enviado para o seu e-mail</div>
 							</div>
-							<div class="text-center"><button type="submit">Finalizar</button></div>
+							<div class="text-center"><button type="button">Finalizar</button></div>
 							<p class="">
 								<b>Desistência:</b><br> 
 								Até 7 dias após o pagamento: Devolução de 100% <br> 
