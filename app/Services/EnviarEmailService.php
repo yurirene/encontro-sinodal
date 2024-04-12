@@ -13,9 +13,7 @@ class EnviarEmailService
 
     public static function inscricaoRecebida(Inscricao $inscricao)
     {
-        $mensagem = "Olá, {$inscricao->nome}. Recebemos sua inscrição e estamos ansiosos para ver você no Encontro Sinodal de Mocidades Setentrional. Aguardamos seu pagamento para a confirmação da sua inscrição."
-            . PHP_EOL
-            . "Você pode acompanhar a sua inscrição através do link: https://encontro.csmset.com.br/acompanhamento/{{$inscricao->codigo}}";
+        $mensagem = "Olá, {$inscricao->nome}. Inscrição para o ENCONTRO SINODAL recebida. Efetue o pagamento para a confirmação.";
         return EnviarMsgService::sendSMS($inscricao, $mensagem);
         // return Mail::to($inscricao->email)->send(new COLEmail($inscricao, $mensagem, 'Inscrição Recebida'));
     }
