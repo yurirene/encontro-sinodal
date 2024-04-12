@@ -172,11 +172,14 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center">Valor AM</h4>
 							<p class="text-center">
-								<b>15/04/24 - 25/10/24</b>
+								<b>12/04/24 - 31/10/24</b>
 								<br>
 								R$130,00 (Transporte não incluso)
-								<br>
-								<b><span class="text-danger">*</span>Diária: R$60,00</b>
+                            </p>
+							<h5 class="text-center mt-2">Diária</h5>
+                            <p class="text-center">
+								<b>01/11/24 - 10/11/24</b><br>
+								R$ 60,00 (Transporte não incluso)
 							</p>
 						</div>
 					</div>
@@ -186,7 +189,7 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center">Valor RR</h4>
 							<p class="text-center">
-								<b>15/04/24 - 25/10/24</b>
+								<b>12/04/24 - 31/10/24</b>
 								<br>
 								R$110,00
 							</p>
