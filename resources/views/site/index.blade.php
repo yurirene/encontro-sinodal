@@ -62,7 +62,7 @@
 			<nav id="navbar" class="navbar">
 				<ul>
 					<li><a class="nav-link scrollto active" href="#about">Informações</a></li>
-					<li><a class="nav-link scrollto active" href="#">Camisa</a></li>
+					{{-- <li><a class="nav-link scrollto active" href="#">Camisa</a></li> --}}
 					<li><a class="getstarted scrollto" href="#contact">Inscrever-se</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
@@ -135,7 +135,7 @@
 
 				<div class="row content">
 
-					<div class="col-lg-6">
+					<div class="col-lg-6 mt-3">
                         <p>
                             O livro de Hebreus destaca a supremacia de Cristo sobre todas as coisas. Ele é apresentado como o Filho de Deus, superior aos profetas e anjos. Como sumo sacerdote perfeito, Cristo ofereceu a si mesmo como sacrifício único, trazendo perdão e salvação eterna. Ele inaugura um novo pacto baseado na graça, oferecendo acesso direto a Deus. Em Cristo, encontramos o cumprimento das promessas do Antigo Testamento e a esperança da vida eterna.
                             <br>
@@ -144,7 +144,7 @@
                             nos dias 15 a 17 de novembro de 2024, na Chácara Jeová Shalom, em Iranduba - AM. Será inesquecível!
                         </p>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 mt-3">
 						<div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
 							<div class="member-info">
 								<h4>Rev. Alfredo</h4>
@@ -175,6 +175,8 @@
 								<b>15/04/24 - 25/10/24</b>
 								<br>
 								R$130,00 (Transporte não incluso)
+								<br>
+								<b><span class="text-danger">*</span>Diária: R$60,00</b>
 							</p>
 						</div>
 					</div>
@@ -208,10 +210,8 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center">Crianças</h4>
 							<p class="">
-								<b>2 a 5 anos</b> - R$ 40,00* <br>
-								<b>6 a 9 anos</b> - R$ 60,00* <br>
-								<b>10 a 12 anos</b> - R$ 80,00* <br>
-								*Valor da inscrição (não incluso o Ônibus)
+								<b>6 anos a 12 anos</b> - R$ 30,00* <br>
+								*Valor da inscrição (não incluso o transporte)
 							</p>
 						</div>
 					</div>
@@ -348,7 +348,7 @@
 							</div>
 							<div class="row">
 								<div class="form-group col-md-6">
-									<label for="onibus">Ônibus (Apenas para Roraima)</label>
+									<label for="onibus">Precisa de Transporte para o local do evento?</label>
 									<select class="form-control" name="onibus" id="onibus">
 										<option value="SIM">SIM</option>
 										<option value="NAO" selected>NÃO</option>
@@ -371,34 +371,28 @@
 									</select>
 								</div>
 								<div class="form-group col-md-6" id="criancas_qtd" style="display: none;">
-                                    <div class="col">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="cat1" style="height: 44px;">2 a 5 anos</span>
-                                            </div>
-                                            <input type="number" class="form-control" name="cat1">
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                            <span class="input-group-text" id="cat2" style="height: 44px;">6 a 10 anos</span>
-                                            </div>
-                                            <input type="number" class="form-control" name="cat2">
-                                        </div>
-                                    </div>
 									<div class="row">
 										<div class="col">
+											<label>Quantas?</label>
 											<div class="input-group mb-3">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="cat3" style="height: 44px;">11 a 12 anos</span>
+													<span class="input-group-text" id="cat3" style="height: 44px;">6 a 12 anos</span>
 												</div>
 												<input type="number" class="form-control" name="cat3">
 											</div>
 										</div>
 									</div>
 								</div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="alergia">Possui algum tipo de alergia?</label>
+                                    <input type="text" class="form-control alergia" name="alergia" id="alergia">
+                                    <small>Alergia ou Restrição à alimentos ou medicamentos</small>
+                                </div>
 							</div>
+                            <div class="row">
+
+                            </div>
 							<div class="my-3">
 								<div class="loading">Loading</div>
 								<div class="error-message"></div>

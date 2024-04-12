@@ -20,11 +20,11 @@
                     {!! Form::text('nome', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('nome') }}</small>
                     </div>
-                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                    {{-- <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     {!! Form::label('email', 'E-mail') !!}
                     {!! Form::text('email', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('email') }}</small>
-                    </div>
+                    </div> --}}
                     <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
                     {!! Form::label('celular', 'Celular') !!}
                     {!! Form::text('celular', null, ['class' => 'form-control', 'required' => 'required']) !!}
@@ -47,15 +47,21 @@
                     </div>
                     <div class="form-group{{ $errors->has('tipo_pagamento') ? ' has-error' : '' }}">
                     {!! Form::label('tipo_pagamento', 'Pagamento') !!}
-                    {!! Form::select('tipo_pagamento',['PIX' => 'PIX', 'PIX_PARCELADO' => 'Parcelado (PIX)', 'BOLETO_PARCELADO' => 'Parcelado (BOLETO)'], null, ['id' => 'tipo_pagamento', 'class' => 'form-control', 'required' => 'required']) !!}
+                    {!! Form::select('tipo_pagamento',['PIX' => 'PIX', 'PIX PARCELADO' => 'PIX Parcelado 2X'], null, ['id' => 'tipo_pagamento', 'class' => 'form-control', 'required' => 'required']) !!}
                     <small class="text-danger">{{ $errors->first('tipo_pagamento') }}</small>
                     </div>
-                    <div id="parcelas">
+                    {{-- <div id="parcelas">
                         <div class="form-group{{ $errors->has('quantidade_parcelas') ? ' has-error' : '' }}">
                             {!! Form::label('quantidade_parcelas', 'Parcelas') !!}
                             {!! Form::select('quantidade_parcelas',[2 => '2', 3 => '3', 4 => '4', 5 => '5'], null, ['id' => 'quantidade_parcelas', 'class' => 'form-control', 'required' => 'required']) !!}
                             <small class="text-danger">{{ $errors->first('quantidade_parcelas') }}</small>
                         </div>
+                    </div> --}}
+
+                    <div class="form-group{{ $errors->has('alergia') ? ' has-error' : '' }}">
+                        {!! Form::label('alergia', 'Alergia') !!}
+                        {!! Form::text('alergia', null, ['class' => 'form-control']) !!}
+                        <small class="text-danger">{{ $errors->first('alergia') }}</small>
                     </div>
                     {!! Form::submit("Salvar", ['class' => 'btn btn-success']) !!}
                     <a href="{{route('inscritos.index')}}" class="btn btn-secondary">Voltar</a>
@@ -67,13 +73,4 @@
 @stop
 
 @push('js')
-<script>
-$('#tipo_pagamento').on('change', function() {
-    if (this.value == 'BOLETO_PARCELADO') {
-        $('#parcelas').show();
-    } else {
-        $('#parcelas').hide();
-    }
-});
-</script>
 @endpush
