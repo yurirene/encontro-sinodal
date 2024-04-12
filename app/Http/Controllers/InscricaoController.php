@@ -32,11 +32,11 @@ class InscricaoController extends Controller
         $total_onibus_confirmado = OnibusConfirmado::count();
         $total_onibus_nao_confirmado = Inscricao::whereDoesntHave('confirmacaoOnibus')->where('onibus',1)->count();
 
-        $todos_inscritos_por_federacao = Inscricao::selectRaw("federacao, 
-        count(*) as total, 
-        CASE 
-            WHEN status = 1 THEN 'Incompleto' 
-            WHEN status = 2 THEN 'Confirmado' 
+        $todos_inscritos_por_federacao = Inscricao::selectRaw("federacao,
+        count(*) as total,
+        CASE
+            WHEN status = 1 THEN 'Incompleto'
+            WHEN status = 2 THEN 'Confirmado'
             ELSE 'Aberto'
         END status"
         )->groupBy(['federacao', 'status'])
@@ -98,9 +98,10 @@ class InscricaoController extends Controller
 
     public function store(Request $request)
     {
-        if (Inscricao::where('email', $request->email)->get()->isNotEmpty()){
-            return redirect()->back()->withErrors('Este Email já foi utilizado');
+        if (Inscricao::where('celular', $request->celular)->count() > 2){
+            return redirect()->back()->withErrors('Este nº de celular já foi utilizado em mais de duas inscrições');
         }
+
         DB::beginTransaction();
         try {
             $inscricao = Inscricao::create([
@@ -136,6 +137,7 @@ class InscricaoController extends Controller
         } catch (\Throwable $th) {
             DB::rollBack();
             Log::error($th->getMessage());
+            dd($th->getMessage());
             return redirect()->route('site.index')->with('mensagem', false);
         }
     }
@@ -149,7 +151,7 @@ class InscricaoController extends Controller
                 'status' => true
             ]);
         } catch (\Throwable $th) {
-            
+
             return redirect()->route('inscritos.index')->with([
                 'mensagem' => 'Erro ao realizar operação',
                 'status' => false
@@ -169,7 +171,7 @@ class InscricaoController extends Controller
                 'status' => true
             ]);
         } catch (\Throwable $th) {
-            
+
             return redirect()->back()->with([
                 'mensagem' => 'Erro ao realizar operação',
                 'status' => false
@@ -184,5 +186,5 @@ class InscricaoController extends Controller
             'inscricao' => $inscricao
         ]);
     }
-    
+
 }

@@ -4,6 +4,9 @@ return [
 
     'telegram_token' => '5310074503:AAGOnpiycEWBKv3w4Gh349tQa5m1EWK9kxU',
     'telegram_chat_id' => '-764226913',
+    'sms_id' => env('SENDER_ID'),
+    'sms_api_key' => env('SENDER_API_KEY'),
+    'sms_url_api' => env('SENDER_URL_API'),
 
     /*
     |--------------------------------------------------------------------------

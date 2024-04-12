@@ -57,7 +57,7 @@
 
 			<h1 class="logo me-auto"><a href="index.html">Encontro Sinodal</a></h1>
 			<!-- Uncomment below if you prefer to use an image logo -->
-			<!-- <a href="index.html" class="logo me-auto"><img src="/site/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+			{{-- <a href="index.html" class="logo me-auto"><img src="/site/assets/img/encontro.png" alt="" class="img-fluid"></a> --}}
 
 			<nav id="navbar" class="navbar">
 				<ul>
@@ -77,8 +77,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-					<h1>FÉ E A CIDADANIA DESTE MUNDO</h1>
-					<h2>Rev. Heber Campos Jr</h2>
+					<img src="/site/assets/img/supremacia.png" class="img-fluid" alt="">
 				</div>
 				<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
 					<img src="/site/assets/img/encontro.png" class="img-fluid animated" alt="">
@@ -96,7 +95,7 @@
 
 				<div class="row" data-aos="zoom-in">
 
-					
+
 					<div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
 						<h3>FMS</h3>
 					</div>
@@ -113,6 +112,13 @@
 						<h3>FPSAM</h3>
 					</div>
 
+					<div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<h3>PMAN</h3>
+					</div>
+
+					<div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+						<h3>FAMP</h3>
+					</div>
 
 				</div>
 
@@ -128,33 +134,25 @@
 				</div>
 
 				<div class="row content">
+
 					<div class="col-lg-6">
-						<p>
-							Como viveremos diante dos novos desafios que nos são postos à frente? Cidadãos dos céus que já, mas ainda não, 
-							que peregrinam, sem desanimar, fazendo a vontade de seu Senhor?
-						</p>
-						<p>
-							A geração que experimenta as pressões de um abalo mundial que emergiu um modo de viver que repercute em todas as 
-							etapas da vida é convocada à reação bíblica de respirar a completude de sua existência, no Senhor, olhando firmemente para o
-							 Alvo, o Autor e Consumador da Fé, o Senhor Jesus Cristo.
-						</p>
-						
+                        <p>
+                            O livro de Hebreus destaca a supremacia de Cristo sobre todas as coisas. Ele é apresentado como o Filho de Deus, superior aos profetas e anjos. Como sumo sacerdote perfeito, Cristo ofereceu a si mesmo como sacrifício único, trazendo perdão e salvação eterna. Ele inaugura um novo pacto baseado na graça, oferecendo acesso direto a Deus. Em Cristo, encontramos o cumprimento das promessas do Antigo Testamento e a esperança da vida eterna.
+                            <br>
+                            <br>
+                            A Confederação Sinodal de Mocidades Setentrional convoca toda a Mocidade Presbiteriana a se encontrar, outra vez,
+                            nos dias 15 a 17 de novembro de 2024, na Chácara Jeová Shalom, em Iranduba - AM. Será inesquecível!
+                        </p>
 					</div>
-					<div class="col-lg-6 pt-4 pt-lg-0">
-						<p>
-							Com esse mover, a Sinodal Setentrional convoca toda a mocidade presbiteriana a se aglomerar, outra vez, 
-							nos dias 21 a 24 de outubro de 2022, no Acampamento Maná, em Boa Vista – RR, para juntos e unidos celebrarmos a 
-							satisfação de estarmos juntos após um longo período distantes! Será inesquecível! 
-						</p>
+					<div class="col-lg-6">
 						<div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-							<div class="pic"><img src="/site/assets/img/heber.png" class="img-fluid" alt=""></div>
 							<div class="member-info">
-								<h4>Rev. Heber Carlos de Campos Jr </h4>
+								<h4>Rev. Alfredo</h4>
 								<span>Palestrante</span>
-								<p>É ministro presbiteriano desde junho de 1999. Doutor em Teologia Histórica pelo Calvin Theological Seminary, EUA (2009).</p>
+								<p>É ministro presbiteriano, pastor titular na Primeira Igreja Presbiteriana de Roraima.</p>
 							</div>
+							<div class=""><img src="/site/assets/img/preletor.png" class="img-fluid" alt=""></div>
 						</div>
-						
 					</div>
 				</div>
 
@@ -172,11 +170,11 @@
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
-							<h4 class="text-center"><a href="">Valor AM</a></h4>
+							<h4 class="text-center">Valor AM</h4>
 							<p class="text-center">
-								<b>01/08/22 - 30/09/22</b>
+								<b>15/04/24 - 25/10/24</b>
 								<br>
-								R$130,00 (Ônibus não incluso)
+								R$130,00 (Transporte não incluso)
 							</p>
 						</div>
 					</div>
@@ -184,21 +182,21 @@
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
-							<h4 class="text-center"><a href="">Valor RR</a></h4>
+							<h4 class="text-center">Valor RR</h4>
 							<p class="text-center">
-								<b>01/08/22 - 30/09/22</b>
+								<b>15/04/24 - 25/10/24</b>
 								<br>
-								R$160,00 
+								R$110,00
 							</p>
 						</div>
 					</div>
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
-							<h4 class="text-center"><a href="">Translado</a></h4>
+							<h4 class="text-center">Translado</h4>
 							<p class="text-center">
-								<b>Manaus - Boa Vista</b> <br>
-								R$170,00 
+								<b>Boa Vista - Manaus</b> <br>
+								A definir
 							</p>
 						</div>
 					</div>
@@ -208,11 +206,11 @@
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
-							<h4 class="text-center"><a href="">Crianças</a></h4>
+							<h4 class="text-center">Crianças</h4>
 							<p class="">
-								<b>2 a 5 anos</b> - R$ 50,00* <br> 
-								<b>6 a 9 anos</b> - R$ 80,00* <br> 
-								<b>10 a 12 anos</b> - R$ 100,00* <br> 
+								<b>2 a 5 anos</b> - R$ 40,00* <br>
+								<b>6 a 9 anos</b> - R$ 60,00* <br>
+								<b>10 a 12 anos</b> - R$ 80,00* <br>
 								*Valor da inscrição (não incluso o Ônibus)
 							</p>
 						</div>
@@ -220,25 +218,25 @@
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-calendar2-event-fill"></i></div>
-							<h4 class="text-center"><a href="">Data</a></h4>
-							<h4 class="text-center">21 a 24 de Outubro</h4>
+							<h4 class="text-center">Data</h4>
+							<h4 class="text-center">15 a 17 de Novembro</h4>
 						</div>
 					</div>
 
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-geo-alt-fill"></i></div>
-							<h4 class="text-center"><a href="">Local</a></h4>
-							<h4 class="text-center">Boa Vista - RR <br> </h4>
+							<h4 class="text-center">Local</h4>
+							<h4 class="text-center">Chácara Jeová Shalom - AM <br> </h4>
 						</div>
 					</div>
 				</div>
-				
+
 
 			</div>
 		</section><!-- End Services Section -->
 		<!-- ======= Vagas para o Onibus ======= -->
-		<section id="skills" class="skills">
+		{{-- <section id="skills" class="skills">
 			<div class="container" data-aos="fade-up">
 
 				<div class="row">
@@ -277,7 +275,7 @@
 
 			</div>
 		</section>
-		
+
 		<section id="skills" class="skills">
 			<div class="container" data-aos="fade-up">
 
@@ -302,9 +300,9 @@
 				</div>
 
 			</div>
-		</section>
-		
-	
+		</section> --}}
+
+
 		<!-- ======= Contact Section ======= -->
 		<section id="contact" class="contact">
 			<div class="container" data-aos="fade-up">
@@ -316,8 +314,8 @@
 
 				<div class="row">
 					<div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-						
-						<form role="form" class="php-email-form">
+
+						<form role="form" action="{{route('inscritos.store')}}" method="POST"  class="php-email-form">
 							@csrf
 							<div class="row">
 								<div class="form-group col-md-6">
@@ -325,15 +323,12 @@
 									<input type="text" name="nome" class="form-control" id="nome" required>
 								</div>
 								<div class="form-group col-md-6">
-									<label for="email">Email</label>
-									<input type="email" class="form-control" name="email" id="email" required>
+									<label for="celular">Celular</label>
+									<input type="text" class="form-control celular" name="celular" id="celular" required>
+                                    <small>Um SMS será enviado para esse número</small>
 								</div>
 							</div>
 							<div class="row">
-								<div class="form-group col-md-6">
-									<label for="celular">Celular</label>
-									<input type="text" class="form-control celular" name="celular" id="celular" required>
-								</div>
 								<div class="form-group col-md-6">
 									<label for="federacao">Federação</label>
 									<select class="form-control" name="federacao" id="federacao">
@@ -346,58 +341,52 @@
 										<option value="Outro">Outro</option>
 									</select>
 								</div>
-							</div>
-							<div class="row">
 								<div class="form-group col-md-6">
 									<label for="igreja">Igreja</label>
 									<input type="text" class="form-control" name="igreja" id="igreja" required>
 								</div>
+							</div>
+							<div class="row">
 								<div class="form-group col-md-6">
-									<label for="onibus">Ônibus (Apenas para o Amazonas)</label>
+									<label for="onibus">Ônibus (Apenas para Roraima)</label>
 									<select class="form-control" name="onibus" id="onibus">
 										<option value="SIM">SIM</option>
-										<option value="NAO">NÃO</option>
+										<option value="NAO" selected>NÃO</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="tipo_pagamento">Forma de Pagamento</label>
+									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
+										<option value="PIX">PIX À VISTA</option>
+										<option value="PIX PARCELADO">PIX PARCELADO 2X</option>
 									</select>
 								</div>
 							</div>
 							<div class="row">
 								<div class="form-group col-md-6">
-									<label for="tipo_pagamento">Forma de Pagamento</label>
-									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
-										<option value="PIX">PIX</option>
-										<option value="BOLETO">BOLETO</option>
-									</select>
-
-									<small>Acréscimo de 3 reais na forma de Boleto</small>
-								</div>
-								<div class="form-group col-md-6">
 									<label for="criancas">Levará Crianças?</label>
 									<select class="form-control" name="criancas" id="criancas">
-										<option value="N">NÃO</option>
+										<option value="N" selected>NÃO</option>
 										<option value="S">SIM</option>
 									</select>
 								</div>
 								<div class="form-group col-md-6" id="criancas_qtd" style="display: none;">
-									<div class="row">
-										<div class="col">
-											<div class="input-group mb-3">
-												<div class="input-group-prepend">
-												  <span class="input-group-text" id="cat1" style="height: 44px;">2 a 5 anos</span>
-												</div>
-												<input type="number" class="form-control" name="cat1">
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col">
-											<div class="input-group mb-3">
-												<div class="input-group-prepend">
-												<span class="input-group-text" id="cat2" style="height: 44px;">6 a 10 anos</span>
-												</div>
-												<input type="number" class="form-control" name="cat2">
-											</div>
-										</div>
-									</div>
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="cat1" style="height: 44px;">2 a 5 anos</span>
+                                            </div>
+                                            <input type="number" class="form-control" name="cat1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                            <span class="input-group-text" id="cat2" style="height: 44px;">6 a 10 anos</span>
+                                            </div>
+                                            <input type="number" class="form-control" name="cat2">
+                                        </div>
+                                    </div>
 									<div class="row">
 										<div class="col">
 											<div class="input-group mb-3">
@@ -409,23 +398,25 @@
 										</div>
 									</div>
 								</div>
-							</div>							
+							</div>
 							<div class="my-3">
 								<div class="loading">Loading</div>
 								<div class="error-message"></div>
-								<div class="sent-message">Inscrição Efetuada. Um mensagem foi enviado para o seu e-mail</div>
+								<div class="sent-message">Inscrição Efetuada. Um mensagem foi enviada para você</div>
 							</div>
-							<div class="text-center"><button type="button">Finalizar</button></div>
+							<div class="text-center">
+                                <button type="submit" class="btn btn-primary">Finalizar</button>
+                            </div>
 							<p class="">
-								<b>Desistência:</b><br> 
-								Até 7 dias após o pagamento: Devolução de 100% <br> 
+								<b>Desistência:</b><br>
+								Até 7 dias após o pagamento: Devolução de 100% <br>
 								Após 7 dias depois do pagamento: Não haverá devolução <br>
-								<b>Troca:</b><br> 
-								Até dia 30/09/22 é permitida a troca de inscrições <br> 
+								<b>Troca:</b><br>
+								Até dia 04/11/24 é permitida a troca de inscrições <br>
 							</p>
 							<br>
-							
-							<p><b><i>Após finalizar será enviado um e-mail para você acompanhar o status da sua inscrição. Caso não encontre, verifique na caixa de spam</i></b></p>
+
+							<p><b><i>Após finalizar será enviado um sms para você acompanhar o status da sua inscrição.</i></b></p>
 
 						</form>
 					</div>
@@ -472,7 +463,7 @@
 	<script src="/site/assets/js/main.js"></script>
 	<script src="/jquery.mask.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.all.min.js"></script>
-	
+
 	<script>
 		$(document).ready(function(){
 			$('.celular').mask('(00)00000-0000');
@@ -516,7 +507,7 @@
 			Swal.fire('Erro ao Realizar Inscrição')
 		</script>
 	@endif
-	
+
 	@if($errors->any())
 		@foreach($errors->all() as $error)
 		<script>
