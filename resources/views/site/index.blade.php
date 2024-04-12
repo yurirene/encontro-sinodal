@@ -178,8 +178,9 @@
                             </p>
 							<h5 class="text-center mt-2">Diária</h5>
                             <p class="text-center">
-								<b>01/11/24 - 10/11/24</b><br>
+								<b>01/11/24 - 10/11/24*</b><br>
 								R$ 60,00 (Transporte não incluso)
+                                <br><span class="text-sm text-muted">*Enquanto houver vagas</span>
 							</p>
 						</div>
 					</div>
