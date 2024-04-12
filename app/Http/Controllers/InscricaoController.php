@@ -98,8 +98,8 @@ class InscricaoController extends Controller
 
     public function store(Request $request)
     {
-        if (Inscricao::where('celular', $request->celular)->count() > 2){
-            return redirect()->back()->withErrors('Este nº de celular já foi utilizado em mais de duas inscrições');
+        if (Inscricao::where('celular', $request->celular)->get()->isNotEmpty()) {
+            return redirect()->back()->withErrors('Este nº de celular já foi utilizado em outra inscrição');
         }
 
         DB::beginTransaction();
