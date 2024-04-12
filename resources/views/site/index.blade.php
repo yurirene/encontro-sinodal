@@ -401,12 +401,22 @@
 							<div class="text-center">
                                 <button type="submit" class="btn btn-primary">Finalizar</button>
                             </div>
-							<p class="">
-								<b>Desistência:</b><br>
-								Até 7 dias após o pagamento: Devolução de 100% <br>
-								Após 7 dias depois do pagamento: Não haverá devolução <br>
-								<b>Troca:</b><br>
-								Até dia 04/11/24 é permitida a troca de inscrições <br>
+							<p class="text-sm">
+								<h4>Cancelamento:</h4>
+                                <b>POR INICIATIVA DO PARTICIPANTE</b> <br>
+                                Cancelamento até dia 30/09/2024, a devolução corresponderá ao valor pago, descontado os valores de taxas provenientes do pagamento e ressarcimento; que serão realizados mediante depósito/transferência bancária na conta indicada.
+                                <br>
+                                Cancelamento entre os dias 01/10/2024 a 30/10/2024 haverá devolução de 50% do valor pago.
+                                <br>
+                                Cancelamento após 30/10/2024 não haverá devolução de valores.
+                                <br>
+                                <h4>Cessão e Troca de Vagas:</h4>
+                                Será permitida a troca de inscrições mediante envio de e-mail explicativo para a COL do evento , devendo o campo “assunto” ser preenchido como: TROCA DE VAGAS - INSCRIÇÃO. Data limite para trocas: 31 de outubro de 2024. O prazo não será prorrogado!
+
+                                <br>
+                                <h4>Traslado:</h4>
+                                O valor será cobrado separadamente e pedimos que os que tem interesse por favor informar no formulário de inscrição
+
 							</p>
 							<br>
 
