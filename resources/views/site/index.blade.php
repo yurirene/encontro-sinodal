@@ -315,7 +315,7 @@
 				<div class="row">
 					<div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-						<form role="form" action="{{route('inscritos.store')}}" method="POST"  class="php-email-form">
+						<form role="form" action="{{route('inscricao.store')}}" method="POST"  class="php-email-form">
 							@csrf
 							<div class="row">
 								<div class="form-group col-md-6">
