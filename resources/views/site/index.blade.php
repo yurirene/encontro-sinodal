@@ -135,7 +135,7 @@
 
 				<div class="row content">
 
-					<div class="col-lg-6 mt-3">
+					<div class="col-lg-12 mt-3">
                         <p>
                             O livro de Hebreus destaca a supremacia de Cristo sobre todas as coisas. Ele é apresentado como o Filho de Deus, superior aos profetas e anjos. Como sumo sacerdote perfeito, Cristo ofereceu a si mesmo como sacrifício único, trazendo perdão e salvação eterna. Ele inaugura um novo pacto baseado na graça, oferecendo acesso direto a Deus. Em Cristo, encontramos o cumprimento das promessas do Antigo Testamento e a esperança da vida eterna.
                             <br>
@@ -151,7 +151,18 @@
 								<span>Palestrante</span>
 								<p>É ministro presbiteriano, pastor titular na Primeira Igreja Presbiteriana de Roraima.</p>
 							</div>
-							<div class=""><img src="/site/assets/img/preletor.png" class="img-fluid" alt=""></div>
+							<div class=""><img src="/site/assets/img/preletor.png" class="img-fluid" style="max-width: 200px;" alt=""></div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 mt-3">
+						<div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+							<div class="member-info">
+								<h4>Rev. Camilo</h4>
+								<span>Palestrante</span>
+								<p>É ministro presbiteriano, pastor titular na Igreja Presbiteriana Calvário.</p>
+							</div>
+							<div class=""><img src="/site/assets/img/camilo.png" class="img-fluid" style="max-width: 200px;" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -199,10 +210,11 @@
 					<div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
 						<div class="icon-box w-100">
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
-							<h4 class="text-center">Translado</h4>
+							<h4 class="text-center">Pagamento</h4>
 							<p class="text-center">
-								<b>Boa Vista - Manaus</b> <br>
-								A definir
+								<b>Chave PIX</b>
+                                <br>
+								tesouraria@encontro.csmset.com.br
 							</p>
 						</div>
 					</div>
