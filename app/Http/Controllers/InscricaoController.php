@@ -117,8 +117,10 @@ class InscricaoController extends Controller
                 'cat1' => $request->cat1,
                 'cat2' => $request->cat2,
                 'cat3' => $request->cat3,
-                'promocao' => $request->promocao ?? null,
-                'alergia' => $request->alergia
+                'promocao' => $request->promocao,
+                'alergia' => $request->alergia,
+                'nomes_grupo' => $request->nomes_grupo,
+                'favorecido' => $request->favorecido
             ]);
             try{
                 Log::info('Enviar Email para  '. $inscricao->email);

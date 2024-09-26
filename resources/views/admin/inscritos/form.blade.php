@@ -58,6 +58,20 @@
                         </div>
                     </div> --}}
 
+                    <div class="form-group{{ $errors->has('promocao') ? ' has-error' : '' }}">
+                        {!! Form::label('promocao', 'Promoção') !!}
+                        {!! Form::select('promocao',['N' => 'Não', 'S' => 'Sim'], null, ['id' => 'promocao', 'class' => 'form-control', 'required' => 'required']) !!}
+                    </div>
+
+                    <div class="form-group{{ $errors->has('nomes_grupo') ? ' has-error' : '' }}">
+                        {!! Form::label('nomes_grupo', 'Integrantes da Promoção') !!}
+                        {!! Form::textarea('nomes_grupo', null, ['class' => 'form-control', 'required' => 'required', 'rows' => 5]) !!}
+                    </div>
+                    <div class="form-group{{ $errors->has('favorecido') ? ' has-error' : '' }}">
+                        {!! Form::label('favorecido', 'Favorecido da Promoção') !!}
+                        {!! Form::text('favorecido', null, ['class' => 'form-control', 'required' => 'required']) !!}
+                    </div>
+
                     <div class="form-group{{ $errors->has('alergia') ? ' has-error' : '' }}">
                         {!! Form::label('alergia', 'Alergia') !!}
                         {!! Form::text('alergia', null, ['class' => 'form-control']) !!}

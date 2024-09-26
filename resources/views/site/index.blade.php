@@ -130,7 +130,7 @@
 			<div class="container" data-aos="fade-up">
 
 				<div class="section-title">
-					<h2>Sobre o Evento</h2>
+					<h2>Sobre o RETIRO</h2>
 				</div>
 
 				<div class="row content">
@@ -405,6 +405,35 @@
                                     <input type="text" class="form-control alergia" name="alergia" id="alergia">
                                     <small>Alergia ou Restrição à alimentos ou medicamentos</small>
                                 </div>
+                                <div class="form-group col-md-6">
+									<label for="promocao">Vai participar da promoção <b>Você e +4</b>?</label>
+									<select class="form-control" name="promocao" id="promocao">
+										<option value="N" selected>NÃO</option>
+										<option value="S">SIM</option>
+									</select>
+								</div>
+
+								<div class="form-group col-md-6 eh_promocao">
+									<label for="favorecido">Nome de quem vai ganhar a gratuidade (6ª inscrição):</label>
+									<input type="text" class="form-control" name="favorecido" id="favorecido">
+                                    <small class="text-muted">Se não souberem, ainda, coloque como indefinido</small>
+								</div>
+								<div class="form-group col-md-6 eh_promocao">
+									<label for="nomes_grupo">Nome e contato de quem está no grupo da promoção:</label>
+									<textarea
+                                        class="form-control"
+                                        name="nomes_grupo"
+                                        id="nomes_grupo"
+                                        rows="4"
+                                    >
+                                    </textarea>
+                                    <small class="text-muted">
+                                        Nome Integrante 1 - (99) 99999-9990 <br>
+                                        Nome Integrante 2 - (99) 99999-9990 <br>
+                                        ...
+                                    </small>
+								</div>
+
 							</div>
                             <div class="row">
 
@@ -487,6 +516,7 @@
 	<script>
 		$(document).ready(function(){
 			$('.celular').mask('(00)00000-0000');
+            $('.eh_promocao').hide();
 		});
 		$('#tipo_pagamento').on('change', function() {
 			if (this.value != 'PIX') {
@@ -505,6 +535,14 @@
 				$('#criancas_qtd').show();
 			} else {
 				$('#criancas_qtd').hide();
+			}
+		});
+
+		$('#promocao').on('change', function() {
+			if (this.value != 'N') {
+				$('.eh_promocao').show();
+			} else {
+				$('.eh_promocao').hide();
 			}
 		});
 	</script>

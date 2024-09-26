@@ -51,6 +51,11 @@ class EnviarMsgService
         $mensagem .= 'Ônibus: ' . ($inscricao->onibus==1 ? 'Sim' : 'Não') . PHP_EOL;
         $mensagem .= 'Promoção: ' . ($inscricao->promocao != null ? 'Sim' : 'Não') . PHP_EOL;
 
+        if (!is_null($inscricao->nomes_grupo)) {
+            $mensagem .= 'Integrantes: ' . ($inscricao->nomes_grupo) . PHP_EOL;
+            $mensagem .= 'Favorecido: ' . ($inscricao->favorecido) . PHP_EOL;
+        }
+
         self::sendMessage($mensagem);
     }
 

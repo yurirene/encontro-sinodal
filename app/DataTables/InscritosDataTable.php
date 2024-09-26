@@ -44,7 +44,7 @@ class InscritosDataTable extends DataTable
             })
 
             ->editColumn('promocao', function($sql) {
-                if (is_null($sql->promocao)) {
+                if (is_null($sql->promocao) || $sql->promocao == 'N') {
                     return  '';
                 }
                 return '<span class="badge badge-success">PROMOÇÃO</span>';
