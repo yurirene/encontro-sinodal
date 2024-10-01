@@ -126,7 +126,7 @@ class InscricaoController extends Controller
                 Log::info('Enviar Email para  '. $inscricao->email);
                 EnviarEmailService::inscricaoRecebida($inscricao);
             }catch(Exception $e) {
-                Log::error('Envio de e-mail de inscrição recebida : '.$inscricao->email);
+                Log::error('Erro no Envio de e-mail de inscrição recebida : '.$inscricao->email);
             }
             TimelineService::inscrito($inscricao);
             EnviarMsgService::novaInscricao($inscricao);
@@ -139,7 +139,6 @@ class InscricaoController extends Controller
         } catch (\Throwable $th) {
             DB::rollBack();
             Log::error($th->getMessage());
-            dd($th->getMessage());
             return redirect()->route('site.index')->with('mensagem', false);
         }
     }
@@ -153,9 +152,9 @@ class InscricaoController extends Controller
                 'status' => true
             ]);
         } catch (\Throwable $th) {
-
+            Log::error($th->getMessage());
             return redirect()->route('inscritos.index')->with([
-                'mensagem' => 'Erro ao realizar operação',
+                'mensagem' => $th->getMessage(),
                 'status' => false
             ])->withInput();
         }

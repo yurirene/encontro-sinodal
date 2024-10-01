@@ -183,13 +183,13 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center">Valor AM</h4>
 							<p class="text-center">
-								<b>12/04/24 - 31/10/24</b>
+								<b>Período de Inscrição: 12/04/24 - 31/10/24</b>
 								<br>
 								R$130,00 (Transporte não incluso)
                             </p>
 							<h5 class="text-center mt-2">Diária</h5>
                             <p class="text-center">
-								<b>01/11/24 - 10/11/24*</b><br>
+								<b>Período de Inscrição: 01/11/24 - 10/11/24*</b><br>
 								R$ 60,00 (Transporte não incluso)
                                 <br><span class="text-sm text-muted">*Enquanto houver vagas</span>
 							</p>
@@ -201,7 +201,7 @@
 							<div class="icon text-center"><i class="bi bi-currency-dollar"></i></div>
 							<h4 class="text-center">Valor RR</h4>
 							<p class="text-center">
-								<b>12/04/24 - 31/10/24</b>
+								<b>Período de Inscrição: 12/04/24 - 31/10/24</b>
 								<br>
 								R$110,00
 							</p>
@@ -214,7 +214,7 @@
 							<p class="text-center">
 								<b>Chave PIX</b>
                                 <br>
-								tesouraria@encontro.csmset.com.br
+								(92)98847-5481
 							</p>
 						</div>
 					</div>
@@ -348,12 +348,13 @@
 								<div class="form-group col-md-6">
 									<label for="federacao">Federação</label>
 									<select class="form-control" name="federacao" id="federacao">
-										<option value="FAMP">FAMP</option>
 										<option value="FEPAM">FEPAM</option>
 										<option value="FMS">FMS</option>
 										<option value="FMRR">FMRR</option>
 										<option value="FPSAM">FPSAM</option>
-										<option value="FPMAN">FPMAN</option>
+										<option value="FAMP">Presbitério Amazonas</option>
+										<option value="FPMAN">Presbitério Manaus</option>
+										<option value="FPMAM">Presbitério Missionário do Amazonas</option>
 										<option value="Outro">Outro</option>
 									</select>
 								</div>
@@ -373,8 +374,7 @@
 								<div class="form-group col-md-6">
 									<label for="tipo_pagamento">Forma de Pagamento</label>
 									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
-										<option value="PIX">PIX À VISTA</option>
-										<option value="PIX PARCELADO">PIX PARCELADO 2X</option>
+										<option value="PIX" selected>PIX À VISTA</option>
 									</select>
 								</div>
 							</div>
