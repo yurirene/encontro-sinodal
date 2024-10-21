@@ -374,7 +374,8 @@
 								<div class="form-group col-md-6">
 									<label for="tipo_pagamento">Forma de Pagamento</label>
 									<select class="form-control" name="tipo_pagamento" id="tipo_pagamento">
-										<option value="PIX" selected>PIX À VISTA</option>
+										<option value="PIX" selected>PIX</option>
+										<option value="PIX" selected>CARTÃO</option>
 									</select>
 								</div>
 							</div>
